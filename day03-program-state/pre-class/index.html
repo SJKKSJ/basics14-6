@@ -1,0 +1,422 @@
+<!--  All HTML files begin with the following line: -->
+<!DOCTYPE html>
+<!-- This indicates that the rest of the lines that follow are to be interpreted as HTML. It tells the browser about what document type to expect. -->
+
+<!-- All text enclosed in angled brackets are known as HTML element tags. There are usually, but not always, starting and closing element "tags", each representing a HTML element.
+The <html> element is known as the root element of a HTML page. All other elements are encased within it. -->
+<html>
+  <!-- The <head> element contains meta information about the HTML page, information that is not rendered or displayed by the browser -->
+  <head>
+    <!-- The meta tag defines meta information in the HTML document. In this case, we are defining the charset. UTF-8 allows us to use emojis in the CodeSandbox environment -->
+    <meta charset="UTF-8" />
+    <!-- The <title> element specifies a title for the HTML page (which is shown in the browser's title bar or in the page's tab) and is the default name given to a bookmark of a webpage. -->
+    <title>Basics</title>
+    <!-- The <link> element specifies a relationship between this HTML page and an external resource, namely the styles.css file here. For the syntax '../../' in '../../styles.css', we are referring to the styles.css file (in the main directory) found 2 folders above the current one. In this case, we are linking a stylesheet which is a CSS file containing information relating to the layout and style of the webpage. The syntax within the styles.css file is also referred to as CSS - Cascading Style Sheets. -->
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+
+  <!-- The <body> element defines the document's body, and is a container for all the visible contents that will be rendered by the browser.  -->
+  <body>
+    <!-- The <nav> tag semantically defines a set of navigation links. It doesn't have many properties different from a <div>, and exists purely for semantic naming. -->
+    <nav>
+      <!-- The <ul> tag represents an unordered list, where items in the list are rendered on a vertical bulleted list. While we are listing the days of the exercises on this navbar, we are positioning them horizontally without the bullets. This is done using CSS, and you can preview the syntax in styles.css (do a search for "nav ul"). -->
+      <ul>
+        <li>
+          <!-- An <a> tag defines a hyperlink, linking one page to another. The page to link to will be added to the "href" property of the tag. -->
+          <a href="../../index.html">Home</a>
+        </li>
+        <li>
+          <!-- An <a> tag defines a hyperlink, linking one page to another. The page to link to will be added to the "href" property of the tag. -->
+          <a
+            href="../../day01-data-manipulation-and-functions/in-class/index.html"
+            >Day 1</a
+          >
+        </li>
+        <li>
+          <a
+            href="../../day02-if-statements-boolean-operators/in-class/index.html"
+            >Day 2</a
+          >
+        </li>
+        <li>
+          <a href="../../day03-program-state/in-class/index.html">Day 3</a>
+        </li>
+        <li>
+          <a href="../../day04-loops/in-class/index.html">Day 4</a>
+        </li>
+        <li>
+          <a href="../../day05-mad-libs/in-class/index.html">Day 5</a>
+        </li>
+        <li>
+          <a href="../../day07-moar-cards/in-class/index.html">Day 7</a>
+        </li>
+        <li class="project">
+          <a href="../../project3-blackjack/index.html">Blackjack</a>
+        </li>
+        <li class="project">
+          <a href="../../project2-beat-that/index.html">Beat That!</a>
+        </li>
+        <li class="project">
+          <a href="../../project1-sps/index.html">Scissors Paper Stone</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- The <h1> element defines a large heading. There are 6 pre-set header elements, <h1> to <h6> -->
+    <h1 id="header">🚀 Basics Day 3: Pre-Class Exercises 🚀</h1>
+    <div class="flex justify-content-center">
+      <div class="button-group">
+        <a href="../pre-class/index.html" class="active button-group-button"
+          >Pre-Class</a
+        >
+        <a href="../in-class/index.html" class="button-group-button"
+          >In-Class</a
+        >
+      </div>
+    </div>
+    <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+    <hr />
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>Follow Along (Intro to Scope)</h2>
+      <div class="instructions-text">
+        <p>Follow along the examples in the Intro to Scope module.</p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Input:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="intro-scope-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="intro-scope-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="intro-scope-output-div"></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>Base: App Setup (Program Lifecycle and State)</h2>
+      <div class="instructions-text">
+        <p>
+          Replace the code per the instructions in the Exercises (Base) section
+          in the Program Lifecycle and State module.
+        </p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Input:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="app-setup-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="app-setup-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="app-setup-output-div"></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>Base: Last Roll (Program Lifecycle and State)</h2>
+      <div class="instructions-text">
+        <p>
+          Create a version of the dice game that tells the user what their
+          previous dice roll was.
+        </p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Input:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="last-roll-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="last-roll-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="last-roll-output-div"></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>Base: Win / Loss (Program Lifecycle and State)</h2>
+      <div class="instructions-text">
+        <p>
+          As the user continues to play the game, tell them what their current
+          win / loss percentage is.
+        </p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Input:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="win-loss-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="win-loss-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="win-loss-output-div"></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>More Comfortable: Most Rolled (Program Lifecycle and State)</h2>
+      <div class="instructions-text">
+        <p>Keep track of the number that's rolled the most times.</p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Input:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="most-rolled-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="most-rolled-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="most-rolled-output-div"></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>More Comfortable: Guessing (Program Lifecycle and State)</h2>
+      <div class="instructions-text">
+        <p>
+          If the player guess is off-by-1 they win 1 point. If the player guess
+          is exact they win 2 points.
+        </p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Input:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="guessing-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="guessing-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="guessing-output-div"></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>More Comfortable: Advanced Guessing (Program Lifecycle and State)</h2>
+      <div class="instructions-text">
+        <p>
+          The player guess can be off by up to 4. If the player guess is
+          off-by-4 they win 1 point. Off-by-3, 2 points, off-by-2, 3 points,
+          off-by-1, 4 points, exact, 5 points.
+        </p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Input:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="advanced-guessing-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="advanced-guessing-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="advanced-guessing-output-div"></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>Follow Along (Program State for Game Modes)</h2>
+      <div class="instructions-text">
+        <p>
+          Follow along the Blue / Green app in the Program State for Game Modes
+          module.
+        </p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Input:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="follow-along-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="follow-along-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="follow-along-output-div"></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>Red Mode (Program State for Game Modes)</h2>
+      <div class="instructions-text">
+        <p>Add a Red mode to the game.</p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Input:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="red-mode-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="red-mode-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="red-mode-output-div"></div>
+    </div>
+    <!-- Everything below this is incorporating JavaScript programming logic into the webpage. -->
+    <!-- The script tag encloses JavaScript syntax for the browser to interpret programtically -->
+    <!-- The following line imports all code written in the script.js file -->
+    <script src="script.js"></script>
+    <!-- Define button click functionality -->
+    <script>
+      // Declare and define variables that represents the Submit Button for each exercise
+      var introScopeButton = document.querySelector(
+        "#intro-scope-submit-button"
+      );
+      var appSetupButton = document.querySelector("#app-setup-submit-button");
+      var lastRollButton = document.querySelector("#last-roll-submit-button");
+      var winLossButton = document.querySelector("#win-loss-submit-button");
+      var mostRolledButton = document.querySelector(
+        "#most-rolled-submit-button"
+      );
+      var guessingButton = document.querySelector("#guessing-submit-button");
+      var advancedGuessingButton = document.querySelector(
+        "#advanced-guessing-submit-button"
+      );
+      var followAlongButton = document.querySelector(
+        "#follow-along-submit-button"
+      );
+      var redModeButton = document.querySelector("#red-mode-submit-button");
+
+      // When the submit button is clicked, access the text entered by the user in the input field
+      // And pass it as an input parameter to the main function as defined in script.js
+      introScopeButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector("#intro-scope-input-field");
+        // Store the output of the main function in a new variable
+        var result = introScopeMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector("#intro-scope-output-div");
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      appSetupButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector("#app-setup-input-field");
+        // Store the output of the main function in a new variable
+        var result = appSetupMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector("#app-setup-output-div");
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      lastRollButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector("#last-roll-input-field");
+        // Store the output of the main function in a new variable
+        var result = lastRollMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector("#last-roll-output-div");
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      winLossButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector("#win-loss-input-field");
+        // Store the output of the main function in a new variable
+        var result = winLossMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector("#win-loss-output-div");
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      mostRolledButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector("#most-rolled-input-field");
+        // Store the output of the main function in a new variable
+        var result = mostRolledMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector("#most-rolled-output-div");
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      guessingButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector("#guessing-input-field");
+        // Store the output of the main function in a new variable
+        var result = guessingMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector("#guessing-output-div");
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      advancedGuessingButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector("#advanced-guessing-input-field");
+        // Store the output of the main function in a new variable
+        var result = advancedGuessingMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector("#advanced-guessing-output-div");
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      followAlongButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector("#follow-along-input-field");
+        // Store the output of the main function in a new variable
+        var result = followAlongMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector("#follow-along-output-div");
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      redModeButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector("#red-mode-input-field");
+        // Store the output of the main function in a new variable
+        var result = redModeMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector("#red-mode-output-div");
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+    </script>
+  </body>
+</html>

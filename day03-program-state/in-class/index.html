@@ -1,0 +1,408 @@
+<!--  All HTML files begin with the following line: -->
+<!DOCTYPE html>
+<!-- This indicates that the rest of the lines that follow are to be interpreted as HTML. It tells the browser about what document type to expect. -->
+
+<!-- All text enclosed in angled brackets are known as HTML element tags. There are usually, but not always, starting and closing element "tags", each representing a HTML element.
+The <html> element is known as the root element of a HTML page. All other elements are encased within it. -->
+<html>
+  <!-- The <head> element contains meta information about the HTML page, information that is not rendered or displayed by the browser -->
+  <head>
+    <!-- The meta tag defines meta information in the HTML document. In this case, we are defining the charset. UTF-8 allows us to use emojis in the CodeSandbox environment -->
+    <meta charset="UTF-8" />
+    <!-- The <title> element specifies a title for the HTML page (which is shown in the browser's title bar or in the page's tab) and is the default name given to a bookmark of a webpage. -->
+    <title>Basics</title>
+    <!-- The <link> element specifies a relationship between this HTML page and an external resource, namely the styles.css file here. For the syntax '../../' in '../../styles.css', we are referring to the styles.css file (in the main directory) found 2 folders above the current one. In this case, we are linking a stylesheet which is a CSS file containing information relating to the layout and style of the webpage. The syntax within the styles.css file is also referred to as CSS - Cascading Style Sheets. -->
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+
+  <!-- The <body> element defines the document's body, and is a container for all the visible contents that will be rendered by the browser.  -->
+  <body>
+    <!-- The <nav> tag semantically defines a set of navigation links. It doesn't have many properties different from a <div>, and exists purely for semantic naming. -->
+    <nav>
+      <!-- The <ul> tag represents an unordered list, where items in the list are rendered on a vertical bulleted list. While we are listing the days of the exercises on this navbar, we are positioning them horizontally without the bullets. This is done using CSS, and you can preview the syntax in styles.css (do a search for "nav ul"). -->
+      <ul>
+        <li>
+          <!-- An <a> tag defines a hyperlink, linking one page to another. The page to link to will be added to the "href" property of the tag. -->
+          <a href="../../index.html">Home</a>
+        </li>
+        <li>
+          <!-- An <a> tag defines a hyperlink, linking one page to another. The page to link to will be added to the "href" property of the tag. -->
+          <a
+            href="../../day01-data-manipulation-and-functions/in-class/index.html"
+            >Day 1</a
+          >
+        </li>
+        <li>
+          <a
+            href="../../day02-if-statements-boolean-operators/in-class/index.html"
+            >Day 2</a
+          >
+        </li>
+        <li>
+          <a href="../../day03-program-state/in-class/index.html">Day 3</a>
+        </li>
+        <li>
+          <a href="../../day04-loops/in-class/index.html">Day 4</a>
+        </li>
+        <li>
+          <a href="../../day05-mad-libs/in-class/index.html">Day 5</a>
+        </li>
+        <li>
+          <a href="../../day07-moar-cards/in-class/index.html">Day 7</a>
+        </li>
+        <li class="project">
+          <a href="../../project3-blackjack/index.html">Blackjack</a>
+        </li>
+        <li class="project">
+          <a href="../../project2-beat-that/index.html">Beat That!</a>
+        </li>
+        <li class="project">
+          <a href="../../project1-sps/index.html">Scissors Paper Stone</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- The <h1> element defines a large heading. There are 6 pre-set header elements, <h1> to <h6> -->
+    <h1 id="header">🚀 Basics Day 3: In-Class Exercises 🚀</h1>
+    <div class="flex justify-content-center">
+      <div class="button-group">
+        <a href="../pre-class/index.html" class="button-group-button"
+          >Pre-Class</a
+        >
+        <a href="../in-class/index.html" class="active button-group-button"
+          >In-Class</a
+        >
+      </div>
+    </div>
+    <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+    <hr />
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>Base: Secret Word</h2>
+      <div class="instructions-text">
+        <p>
+          Create a game where a player must correctly guess secret words to win.
+        </p>
+        <p>
+          The computer chooses a random word from a set of three words. Feel
+          free to use whatever words you'd like, but we will be using the words
+          "banana", "chisel", and "faucet".
+        </p>
+        <p>
+          To win the game the player must guess correctly
+          <strong>twice</strong> in <strong>total</strong>; but is allowed to
+          guess wrongly in between their two correct guesses.
+        </p>
+        <p>
+          For each guess, output all information such as the guessed word, the
+          secret word, and how many correct guesses the player still needs until
+          she wins.
+        </p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Guess the secret word:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="secret-word-base-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="secret-word-base-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="secret-word-base-output-div"></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>Comfortable: Secret Word Twice in a Row</h2>
+      <div class="instructions-text">
+        <p>
+          Update Secret Word with an additional rule: The player must guess
+          correctly <strong>twice in a row</strong> to win.
+        </p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Guess the secret word:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="secret-word-twice-row-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="secret-word-twice-row-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="secret-word-twice-row-output-div"></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>Comfortable: Secret Word X in a Row</h2>
+      <div class="instructions-text">
+        <p>
+          Update Secret Word game such that the number of times the player needs
+          to guess correctly in a row changes between rounds.
+        </p>
+        <p>
+          We define "round" as all gameplay until a player wins. The number of
+          times the player needs to guess correctly is a number from 2 to 4,
+          randomly chosen at the start of the round.
+        </p>
+        <p>
+          When the player wins, the computer updates the number of times the
+          player needs to guess correctly in a row for the next round.
+        </p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Guess the secret word:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="secret-word-x-row-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="secret-word-x-row-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="secret-word-x-row-output-div"></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>More Comfortable: Dice Within</h2>
+      <div class="instructions-text">
+        <p>
+          Create a new version of our Coding Basics dice game (where the player
+          guesses the dice roll) that randomly becomes easier or harder. At the
+          beginning of the game and each time the player wins, the computer
+          selects a random number from 1 to 3, which we call the "within
+          number". If any of the player's guesses fall within the dice roll plus
+          or minus the within number, the player wins.
+        </p>
+        <p>
+          For example: the app randomly chooses 3 as the within number. The
+          player can guess within 3 of the dice roll to win the game. The player
+          guesses 2 and the dice roll is 5. The guess is within 3 of the dice
+          roll so the player wins the game. At this point, the computer adjusts
+          the difficulty of the game by choosing a new within number.
+        </p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Guess a number:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="dice-within-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="dice-within-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="dice-within-output-div"></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>More Comfortable: Dice Within with 2 Dice</h2>
+      <div class="instructions-text">
+        <p>
+          Update our dice game to include an additional dice. With each player
+          guess, the computer rolls 2 dice. If the player guess is within either
+          of the 2 dice rolls plus or minus the within number, the player wins.
+        </p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Guess a number:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="dice-within-2-dice-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="dice-within-2-dice-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="dice-within-2-dice-output-div"></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>More Comfortable: Dice 4D</h2>
+      <div class="instructions-text">
+        <p>
+          Update our dice game to allow the player to play a round of 4D every 2
+          times the player wins the dice roll guess. Verify our 4D game logic
+          such that it is possible to win this 4D game.
+        </p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Guess a number:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="dice-4d-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="dice-4d-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="dice-4d-output-div"></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>More Comfortable: Secret Word Twice in a Row 2</h2>
+      <div class="instructions-text">
+        <p>Update Secret Word with the following additional rules.</p>
+        <!-- The <ol> tag represents an ordered list, where items in the list can be ordered numerically. -->
+        <ol>
+          <!-- The <li> tag represents a list item, which has to be contained in an ordered list (<ol>) or an unordered list (<ul>). -->
+          <li>The player must guess correctly twice in a row to win</li>
+          <li>
+            Secret words cannot be repeated 2 guesses in a row. E.g. the secret
+            word cannot be "banana" for 2 player guesses in a row. If the secret
+            word for the 1st guess were "banana", the secret word for the 2nd
+            guess would have to be either "chisel" or "faucet".
+          </li>
+        </ol>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Guess the secret word:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="secret-word-twice-2-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="secret-word-twice-2-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="secret-word-twice-2-output-div"></div>
+    </div>
+    <!-- Everything below this is incorporating JavaScript programming logic into the webpage. -->
+    <!-- The script tag encloses JavaScript syntax for the browser to interpret programtically -->
+    <!-- The following line imports all code written in the script.js file -->
+    <script src="script.js"></script>
+    <!-- Define button click functionality -->
+    <script>
+      // Declare and define variables that represents the Submit Button for each exercise
+      var secretWordBaseButton = document.querySelector(
+        "#secret-word-base-submit-button"
+      );
+      var secretWordTwiceRowButton = document.querySelector(
+        "#secret-word-twice-row-submit-button"
+      );
+      var secretWordXRowButton = document.querySelector(
+        "#secret-word-x-row-submit-button"
+      );
+      var diceWithinButton = document.querySelector(
+        "#dice-within-submit-button"
+      );
+      var diceWithin2DiceButton = document.querySelector(
+        "#dice-within-2-dice-submit-button"
+      );
+      var dice4DButton = document.querySelector("#dice-4d-submit-button");
+      var secretWordTwice2Button = document.querySelector(
+        "#secret-word-twice-2-submit-button"
+      );
+
+      // When the submit button is clicked, access the text entered by the user in the corresponding input field for the exercise
+      // And pass it as an input parameter to the various main function(s) as defined in script.js
+      secretWordBaseButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector("#secret-word-base-input-field");
+        // Store the output of the main function in a new variable
+        var result = secretWordBaseMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector("#secret-word-base-output-div");
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      secretWordTwiceRowButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector(
+          "#secret-word-twice-row-input-field"
+        );
+        // Store the output of the main function in a new variable
+        var result = secretWordTwiceRowMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector(
+          "#secret-word-twice-row-output-div"
+        );
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      secretWordXRowButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector("#secret-word-x-row-input-field");
+        // Store the output of the main function in a new variable
+        var result = secretWordXRowMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector("#secret-word-x-row-output-div");
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      diceWithinButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector("#dice-within-input-field");
+        // Store the output of the main function in a new variable
+        var result = diceWithinMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector("#dice-within-output-div");
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      diceWithin2DiceButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector("#dice-within-2-dice-input-field");
+        // Store the output of the main function in a new variable
+        var result = diceWithin2DiceMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector("#dice-within-2-dice-output-div");
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      dice4DButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector("#dice-4d-input-field");
+        // Store the output of the main function in a new variable
+        var result = dice4DMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector("#dice-4d-output-div");
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      secretWordTwice2Button.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector("#secret-word-twice-2-input-field");
+        // Store the output of the main function in a new variable
+        var result = secretWordTwice2Main(input.value);
+
+        // Display result in output element
+        var output = document.querySelector("#secret-word-twice-2-output-div");
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+    </script>
+  </body>
+</html>

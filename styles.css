@@ -1,0 +1,183 @@
+/*
+  The syntax within the styles.css file is also referred to as CSS - Cascading Style Sheets.
+  CSS describes how HTML elements are to be displayed on the screen.
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin-top: 0;
+  font-family: sans-serif;
+  margin-left: 30px;
+  margin-right: 30px;
+  background-color: #e0e0e0;
+}
+
+nav {
+  position: relative;
+  top: 0;
+  left: -30px;
+  width: calc(100% + 60px);
+  margin-bottom: 30px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+nav ul li {
+  float: left;
+  border-right: 1px solid #bbb;
+}
+
+nav ul li.project {
+  float: right;
+}
+
+nav ul li.project:last-child {
+  border-left: 1px solid #bbb;
+}
+
+nav ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#header {
+  text-align: center;
+}
+
+.container {
+  background-color: #ffffff;
+  margin: 40px auto;
+  max-width: 800px;
+  padding: 38px 31px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+input {
+  font-size: 21px;
+  line-height: 33px;
+  margin: 0 0 23px 0;
+  padding: 0 9px;
+  width: 100%;
+}
+
+button {
+  font-size: 21px;
+  line-height: 33px;
+  margin: 0 0 23px 0;
+  padding: 0 6px;
+}
+
+.output-div {
+  background-color: lightgrey;
+  margin: 20px auto;
+  padding: 20px;
+  width: 100%;
+}
+
+hr {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.instructions-text {
+  font-size: 0.85em;
+  font-style: italic;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.ice-double {
+  display: flex;
+}
+
+.ice-double a {
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  color: rgba(71, 71, 71, 1);
+  display: block;
+  flex-basis: 47.5%;
+  margin: 0 1.25%;
+  padding: 2em;
+  border: 2px solid rgba(71, 71, 71, 1);
+  border-radius: 8px;
+}
+
+.ice-double a:hover {
+  color: rgba(71, 71, 71, 0.75);
+  border: 2px solid rgba(71, 71, 71, 0.75);
+}
+
+.button-group {
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
+  justify-self: center;
+}
+
+.button-group .button-group-button {
+  position: relative;
+  flex: 1 1 auto;
+  background: transparent;
+  color: #0d6efd;
+  border-color: #0d6efd;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  border-radius: 0;
+  text-decoration: none;
+  border: 2px solid #333;
+  color: #333;
+  font-weight: bold;
+}
+
+.button-group .button-group-button.active {
+  border: 2px solid #333;
+  color: #fff;
+  background-color: #333;
+  font-weight: bold;
+}
+
+.button-group .button-group-button:not(.active):hover {
+  background-color: rgba(51, 51, 51, 0.67);
+  color: white;
+}
+
+.button-group .button-group-button:not(:first-child) {
+  border-left: 0;
+}
+
+.button-group .button-group-button:first-child {
+  border-top-left-radius: 0.375rem;
+  border-bottom-left-radius: 0.375rem;
+}
+
+.button-group .button-group-button:last-child {
+  border-top-right-radius: 0.375rem;
+  border-bottom-right-radius: 0.375rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center;
+}

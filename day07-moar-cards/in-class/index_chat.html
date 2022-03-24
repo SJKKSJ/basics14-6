@@ -1,0 +1,389 @@
+<!--  All HTML files begin with the following line: -->
+<!DOCTYPE html>
+<!-- This indicates that the rest of the lines that follow are to be interpreted as HTML. It tells the browser about what document type to expect. -->
+
+<!-- All text enclosed in angled brackets are known as HTML element tags. There are usually, but not always, starting and closing element "tags", each representing a HTML element.
+The <html> element is known as the root element of a HTML page. All other elements are encased within it. -->
+<html>
+  <!-- The <head> element contains meta information about the HTML page, information that is not rendered or displayed by the browser -->
+  <head>
+    <!-- The meta tag defines meta information in the HTML document. In this case, we are defining the charset. UTF-8 allows us to use emojis in the CodeSandbox environment -->
+    <meta charset="UTF-8" />
+    <!-- The <title> element specifies a title for the HTML page (which is shown in the browser's title bar or in the page's tab) and is the default name given to a bookmark of a webpage. -->
+    <title>Basics</title>
+    <!-- The <link> element specifies a relationship between this HTML page and an external resource, namely the styles.css file here. For the syntax '../../' in '../../styles.css', we are referring to the styles.css file (in the main directory) found 2 folders above the current one. In this case, we are linking a stylesheet which is a CSS file containing information relating to the layout and style of the webpage. The syntax within the styles.css file is also referred to as CSS - Cascading Style Sheets. -->
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+
+  <!-- The <body> element defines the document's body, and is a container for all the visible contents that will be rendered by the browser.  -->
+  <body>
+    <!-- The <nav> tag semantically defines a set of navigation links. It doesn't have many properties different from a <div>, and exists purely for semantic naming. -->
+    <nav>
+      <!-- The <ul> tag represents an unordered list, where items in the list are rendered on a vertical bulleted list. While we are listing the days of the exercises on this navbar, we are positioning them horizontally without the bullets. This is done using CSS, and you can preview the syntax in styles.css (do a search for "nav ul"). -->
+      <ul>
+        <li>
+          <!-- An <a> tag defines a hyperlink, linking one page to another. The page to link to will be added to the "href" property of the tag. -->
+          <a href="../../index.html">Home</a>
+        </li>
+        <li>
+          <!-- An <a> tag defines a hyperlink, linking one page to another. The page to link to will be added to the "href" property of the tag. -->
+          <a
+            href="../../day01-data-manipulation-and-functions/in-class/index.html"
+            >Day 1</a
+          >
+        </li>
+        <li>
+          <a
+            href="../../day02-if-statements-boolean-operators/in-class/index.html"
+            >Day 2</a
+          >
+        </li>
+        <li>
+          <a href="../../day03-program-state/in-class/index.html">Day 3</a>
+        </li>
+        <li>
+          <a href="../../day04-loops/in-class/index.html">Day 4</a>
+        </li>
+        <li>
+          <a href="../../day05-mad-libs/in-class/index.html">Day 5</a>
+        </li>
+        <li>
+          <a href="../../day07-moar-cards/in-class/index.html">Day 7</a>
+        </li>
+        <li class="project">
+          <a href="../../project3-blackjack/index.html">Blackjack</a>
+        </li>
+        <li class="project">
+          <a href="../../project2-beat-that/index.html">Beat That!</a>
+        </li>
+        <li class="project">
+          <a href="../../project1-sps/index.html">Scissors Paper Stone</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- The <h1> element defines a large heading. There are 6 pre-set header elements, <h1> to <h6> -->
+    <h1 id="header">🚀 Basics Day 7: In-Class Exercises 🚀</h1>
+    <div class="flex justify-content-center">
+      <div class="button-group">
+        <a href="../pre-class/index.html" class="button-group-button"
+          >Pre-Class</a
+        >
+        <a href="../in-class/index.html" class="active button-group-button"
+          >In-Class</a
+        >
+      </div>
+    </div>
+    <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+    <hr />
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>Base: Chat Bot Single Chat Bot Answer Set</h2>
+      <div class="instructions-text">
+        <p>
+          Implement the chat bot that asks a yes/no/maybe question and can
+          respond to a user's response of "yes", "no", or "maybe".
+        </p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Input:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="chat-bot-single-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="chat-bot-single-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="chat-bot-single-output-div"></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>Base: Chat Bot Multiple Chat Bot Answer Sets</h2>
+      <div class="instructions-text">
+        <p>
+          Extend the capabilities of the chat bot by storing question and answer
+          text in the same object.
+        </p>
+        <p>
+          To have our chat bot support more than 1 question, put the
+          <code>questionAndAnswerSet</code> object into an array of chat bot
+          answer sets, and add a 2nd answer set to our array. The bot will pick
+          which question to ask and answer next.
+        </p>
+        <p>Implement a chat bot that alternates between these 2 questions.</p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Input:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="chat-bot-multiple-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="chat-bot-multiple-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="chat-bot-multiple-output-div"></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>Base: Chat Bot Stores User's Name</h2>
+      <div class="instructions-text">
+        <p>
+          Add a new chat bot question that asks for the user's name and responds
+          with a sentence containing the user's name. After greeting the user,
+          the chat bot proceeds with the question from previous exercises.
+        </p>
+        <p>
+          Use the user's name in the bot's subsequent output. You may want to
+          store the user name in a global variable.
+        </p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Input:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="chat-bot-username-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="chat-bot-username-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="chat-bot-username-output-div"></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>Base: Chat Bot Stores User's Age</h2>
+      <div class="instructions-text">
+        <p>
+          Update the chat bot to ask for the user's age after their name. The
+          chat bot's response will differ based on the user's age. For example,
+          we can respond with different outputs if the user is under 20, between
+          20-60, and above 60.
+        </p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Input:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="chat-bot-age-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="chat-bot-age-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="chat-bot-age-output-div"></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>More Comfortable: Chat Bot Named Answer Sets</h2>
+      <div class="instructions-text">
+        <p>
+          Update our chat bot answer set array to be an object whose keys are
+          answer set IDs and values are answer sets. Also add a
+          <code>nextQuestion</code> key to each answer set object, whose value
+          is always an answer set ID, enabling us to chain question sequences in
+          a named manner. This doesn't add new functionality beyond ordering
+          questions using an array, but it sets up the next exercise Dynamic
+          Chat Bot.
+        </p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Input:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="chat-bot-named-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="chat-bot-named-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="chat-bot-named-output-div"></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>More Comfortable: Dynamic Chat Bot</h2>
+      <div class="instructions-text">
+        <p>
+          Update our chat bot to choose a next question based on the answer that
+          the user gives. This next question's ID can be stored in the object
+          that corresponds to the user's answer. See the following sample answer
+          set collection for inspiration. Note that some questions have
+          <code>nextQuestionId</code> nested within specific answers, and other
+          question have <code>nextQuestionId</code> fixed for the question.
+        </p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Input:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="chat-bot-dynamic-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="chat-bot-dynamic-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="chat-bot-dynamic-output-div"></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>More Comfortable: Chat Bot Fortune Telling</h2>
+      <div class="instructions-text">
+        <p>
+          Add questions to our chat bot that are purportedly for fortune
+          telling, but where the bot always provides standard responses that
+          anyone might believe are individualised. For example, the bot might
+          ask "Let me tell your fortune. If you have a birthmark, where is it on
+          your body?" and respond with "You have a great need for other people
+          to like and admire you."
+        </p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Input:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="chat-bot-fortune-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="chat-bot-fortune-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="chat-bot-fortune-output-div"></div>
+    </div>
+    <!-- Everything below this is incorporating JavaScript programming logic into the webpage. -->
+    <!-- The script tag encloses JavaScript syntax for the browser to interpret programtically -->
+    <!-- The following line imports all code written in the script.js file -->
+    <script src="script.js"></script>
+    <!-- Define button click functionality -->
+    <script>
+      // Declare and define variables that represents the Submit Button for each exercise
+      var chatBotSingleButton = document.querySelector(
+        "#chat-bot-single-submit-button"
+      );
+      var chatBotMultipleButton = document.querySelector(
+        "#chat-bot-multiple-submit-button"
+      );
+      var chatBotUsernameButton = document.querySelector(
+        "#chat-bot-username-submit-button"
+      );
+      var chatBotAgeButton = document.querySelector(
+        "#chat-bot-age-submit-button"
+      );
+      var chatBotNamedButton = document.querySelector(
+        "#chat-bot-named-submit-button"
+      );
+      var chatBotDynamicButton = document.querySelector(
+        "#chat-bot-dynamic-submit-button"
+      );
+      var chatBotFortuneButton = document.querySelector(
+        "#chat-bot-fortune-submit-button"
+      );
+
+      // When the submit button is clicked, access the text entered by the user in the input field
+      // And pass it as an input parameter to the main function as defined in script.js
+      chatBotSingleButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector("#chat-bot-single-input-field");
+        // Store the output of the main function in a new variable
+        var result = chatBotSingleMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector("#chat-bot-single-output-div");
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      chatBotMultipleButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector("#chat-bot-multiple-input-field");
+        // Store the output of the main function in a new variable
+        var result = chatBotMultipleMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector("#chat-bot-multiple-output-div");
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      chatBotUsernameButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector("#chat-bot-username-input-field");
+        // Store the output of the main function in a new variable
+        var result = chatBotUsernameMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector("#chat-bot-username-output-div");
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      chatBotAgeButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector("#chat-bot-age-input-field");
+        // Store the output of the main function in a new variable
+        var result = chatBotAgeMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector("#chat-bot-age-output-div");
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      chatBotNamedButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector("#chat-bot-named-input-field");
+        // Store the output of the main function in a new variable
+        var result = chatBotNamedMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector("#chat-bot-named-output-div");
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      chatBotDynamicButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector("#chat-bot-dynamic-input-field");
+        // Store the output of the main function in a new variable
+        var result = chatBotDynamicMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector("#chat-bot-dynamic-output-div");
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      chatBotFortuneButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector("#chat-bot-fortune-input-field");
+        // Store the output of the main function in a new variable
+        var result = chatBotFortuneMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector("#chat-bot-fortune-output-div");
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+    </script>
+  </body>
+</html>

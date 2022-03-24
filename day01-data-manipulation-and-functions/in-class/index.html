@@ -1,0 +1,391 @@
+<!--  All HTML files begin with the following line: -->
+<!DOCTYPE html>
+<!-- This indicates that the rest of the lines that follow are to be interpreted as HTML. It tells the browser about what document type to expect. -->
+
+<!-- All text enclosed in angled brackets are known as HTML element tags. There are usually, but not always, starting and closing element "tags", each representing a HTML element.
+The <html> element is known as the root element of a HTML page. All other elements are encased within it. -->
+<html>
+  <!-- The <head> element contains meta information about the HTML page, information that is not rendered or displayed by the browser -->
+  <head>
+    <!-- The meta tag defines meta information in the HTML document. In this case, we are defining the charset. UTF-8 allows us to use emojis in the CodeSandbox environment -->
+    <meta charset="UTF-8" />
+    <!-- The <title> element specifies a title for the HTML page (which is shown in the browser's title bar or in the page's tab) and is the default name given to a bookmark of a webpage. -->
+    <title>Basics</title>
+    <!-- The <link> element specifies a relationship between this HTML page and an external resource, namely the styles.css file here. For the syntax '../../' in '../../styles.css', we are referring to the styles.css file (in the main directory) found 2 folders above the current one. In this case, we are linking a stylesheet which is a CSS file containing information relating to the layout and style of the webpage. The syntax within the styles.css file is also referred to as CSS - Cascading Style Sheets. -->
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+
+  <!-- The <body> element defines the document's body, and is a container for all the visible contents that will be rendered by the browser.  -->
+  <body>
+    <!-- The <nav> tag semantically defines a set of navigation links. It doesn't have many properties different from a <div>, and exists purely for semantic naming. -->
+    <nav>
+      <!-- The <ul> tag represents an unordered list, where items in the list are rendered on a vertical bulleted list. While we are listing the days of the exercises on this navbar, we are positioning them horizontally without the bullets. This is done using CSS, and you can preview the syntax in styles.css (do a search for "nav ul"). -->
+      <ul>
+        <li>
+          <!-- An <a> tag defines a hyperlink, linking one page to another. The page to link to will be added to the "href" property of the tag. -->
+          <a href="../../index.html">Home</a>
+        </li>
+        <li>
+          <!-- An <a> tag defines a hyperlink, linking one page to another. The page to link to will be added to the "href" property of the tag. -->
+          <a
+            href="../../day01-data-manipulation-and-functions/in-class/index.html"
+            >Day 1</a
+          >
+        </li>
+        <li>
+          <a
+            href="../../day02-if-statements-boolean-operators/in-class/index.html"
+            >Day 2</a
+          >
+        </li>
+        <li>
+          <a href="../../day03-program-state/in-class/index.html">Day 3</a>
+        </li>
+        <li>
+          <a href="../../day04-loops/in-class/index.html">Day 4</a>
+        </li>
+        <li>
+          <a href="../../day05-mad-libs/in-class/index.html">Day 5</a>
+        </li>
+        <li>
+          <a href="../../day07-moar-cards/in-class/index.html">Day 7</a>
+        </li>
+        <li class="project">
+          <a href="../../project3-blackjack/index.html">Blackjack</a>
+        </li>
+        <li class="project">
+          <a href="../../project2-beat-that/index.html">Beat That!</a>
+        </li>
+        <li class="project">
+          <a href="../../project1-sps/index.html">Scissors Paper Stone</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- The <h1> element defines a large heading. There are 6 pre-set header elements, <h1> to <h6> -->
+    <h1 id="header">🚀 Basics Day 1: In-Class Exercises 🚀</h1>
+    <div class="flex justify-content-center">
+      <div class="button-group">
+        <a href="../pre-class/index.html" class="button-group-button"
+          >Pre-Class</a
+        >
+        <a href="../in-class/index.html" class="active button-group-button"
+          >In-Class</a
+        >
+      </div>
+    </div>
+    <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+    <hr />
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>Base: Fahrenheit to Celsius</h2>
+      <div class="instructions-text">
+        <p>
+          The user enters a temperature in Fahrenheit. The program should output
+          the conversion to Celsius in the output box.
+        </p>
+        <p>
+          Write the code inside the main function first, then extract the code
+          into a helper function that accepts Fahrenheit as the input and
+          outputs Celcius.
+        </p>
+        <p>
+          The formula for Fahrenheit to Celcius:
+          <code>Celcius = (Fahrenheit-32) x 5/9</code>
+        </p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Temperature in Fahrenheit:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="fahrenheit-to-celsius-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="fahrenheit-to-celsius-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="fahrenheit-to-celsius-output-div"></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>Base: Road Trip Cost</h2>
+      <div class="instructions-text">
+        <p>
+          The user will enter the length (<strong>in km</strong>) of a planned
+          road trip in his brand new Ferrari. Write a program that outputs the
+          total fuel cost (<strong>in $</strong>) of the road trip.
+        </p>
+        <p>
+          A new Ferrari is able to travel 9 miles/litre of fuel. Fuel costs
+          $2.20/litre.
+        </p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Enter the length (<strong>in km</strong>) of a planned road trip:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="road-trip-cost-base-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="road-trip-cost-base-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="road-trip-cost-base-output-div"></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>Comfortable: Road Trip Cost</h2>
+      <div class="instructions-text">
+        <p>
+          The user enjoyed his road trip so much that he decided to do another
+          road trip again but he wishes to compare the cost of travelling via
+          train against the cost of travelling via his Ferrari.
+        </p>
+        <p>
+          The user will enter the length (<strong>in km</strong>) of the road
+          trip. Write a program that outputs the savings in fuel cost (<strong
+            >in $</strong
+          >) of the road trip if he were to travel via train compared to using
+          his Ferrari.
+        </p>
+        <p>
+          The Ferrari and train are both able to travel 9 miles/litre of fuel.
+          Fuel for the Ferrari costs $2.20/litre. Fuel for the train costs
+          $2.00/litre.
+        </p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Enter the length (<strong>in km</strong>) of the road trip:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="road-trip-cost-comfortable-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="road-trip-cost-comfortable-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="road-trip-cost-comfortable-output-div"></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>More Comfortable: Ice Machine</h2>
+      <div class="instructions-text">
+        <p>
+          A hotel uses an ice machine to prepare ice for guests. They want to
+          start the ice machine as close to each event as possible, so that the
+          ice doesn't melt. In order to do this, they need to estimate how long
+          they will need to run the ice machine.
+        </p>
+        <p>
+          Create a program that estimates the duration the ice machine needs to
+          run. The user will input the number of guests for the event.
+        </p>
+        <p>
+          Assume each guest needs 2 drinks. Each drink has 4 ice cubes. Each
+          cube weights 1.5 grams. The hotel's American-made ice machine produces
+          5 pounds of ice per hour.
+        </p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>How many guests are you expecting for the event?</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="ice-machine-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="ice-machine-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="ice-machine-output-div"></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>More Comfortable: Beer Order</h2>
+      <div class="instructions-text">
+        <p>
+          Create a program for a bar to calculate how many kegs of beer they
+          will need every day. The user will enter the average number of
+          customers per day, and the app will estimate how many half-barrel-size
+          kegs the bar needs per quarter.
+        </p>
+        <p>
+          Assume an average customer drinks 2 pints per visit. There are 124
+          pints of beer in a half-barrel keg.
+        </p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>What is the average number of customers per day?</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="beer-order-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="beer-order-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="beer-order-output-div"></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>More Comfortable: Cost of Cellular Data</h2>
+      <div class="instructions-text">
+        <p>
+          Create a program to calculate how much a user will pay for their the
+          $19.99 50GB post-paid data plan. The user will enter how many GB they
+          use per month, and the app will tell them how much they are paying per
+          GB of data used.
+        </p>
+        <p>
+          Assume that if the user exceeds 50GB, they will automatically purchase
+          an additional 50GB plan. You may find the built-in function
+          <code>Math.ceil</code> helpful for this (you can Google how to use
+          it).
+        </p>
+        <p>
+          For example, if the user only used 1GB this month, the app would
+          calculate $19.99 per GB as the user paid $19.99 for the 50GB plan but
+          only used 1GB. If the user used 2GB this month, the app would
+          calculate $9.98 per GB. If the user used 51GB this month the user
+          would have automatically been billed for 2 plans and the app would
+          calculate $0.78 per GB.
+        </p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>
+        How much cellular data (<strong>in GB</strong>) do you use per month?
+      </p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="cellular-data-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="cellular-data-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="cellular-data-output-div"></div>
+    </div>
+    <!-- Everything below this is incorporating JavaScript programming logic into the webpage. -->
+    <!-- The script tag encloses JavaScript syntax for the browser to interpret programtically -->
+    <!-- The following line imports all code written in the script.js file -->
+    <script src="script.js"></script>
+    <!-- Define button click functionality -->
+    <script>
+      // Declare and define variables that represents the Submit Button for each exercise
+      var fahrenheitToCelsiusButton = document.querySelector(
+        "#fahrenheit-to-celsius-submit-button"
+      );
+      var roadTripCostBaseButton = document.querySelector(
+        "#road-trip-cost-base-submit-button"
+      );
+      var roadTripCostComfortableButton = document.querySelector(
+        "#road-trip-cost-comfortable-submit-button"
+      );
+      var iceMachineButton = document.querySelector(
+        "#ice-machine-submit-button"
+      );
+      var beerOrderButton = document.querySelector("#beer-order-submit-button");
+      var cellularDataButton = document.querySelector(
+        "#cellular-data-submit-button"
+      );
+
+      // When the submit button is clicked, access the text entered by the user in the input field
+      // And pass it as an input parameter to the main function as defined in script.js
+      fahrenheitToCelsiusButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector(
+          "#fahrenheit-to-celsius-input-field"
+        );
+        // Store the output of the main function in a new variable
+        var result = fahrenheitToCelsiusMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector(
+          "#fahrenheit-to-celsius-output-div"
+        );
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      roadTripCostBaseButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector("#road-trip-cost-base-input-field");
+        // Store the output of the main function in a new variable
+        var result = roadTripCostBaseMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector("#road-trip-cost-base-output-div");
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      roadTripCostComfortableButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector(
+          "#road-trip-cost-comfortable-input-field"
+        );
+        // Store the output of the main function in a new variable
+        var result = roadTripCostComfortableMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector(
+          "#road-trip-cost-comfortable-output-div"
+        );
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      iceMachineButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector("#ice-machine-input-field");
+        // Store the output of the main function in a new variable
+        var result = iceMachineMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector("#ice-machine-output-div");
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      beerOrderButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector("#beer-order-input-field");
+        // Store the output of the main function in a new variable
+        var result = beerOrderMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector("#beer-order-output-div");
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      cellularDataButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector("#cellular-data-input-field");
+        // Store the output of the main function in a new variable
+        var result = cellularDataMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector("#cellular-data-output-div");
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+    </script>
+  </body>
+</html>

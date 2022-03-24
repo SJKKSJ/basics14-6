@@ -1,0 +1,395 @@
+<!--  All HTML files begin with the following line: -->
+<!DOCTYPE html>
+<!-- This indicates that the rest of the lines that follow are to be interpreted as HTML. It tells the browser about what document type to expect. -->
+
+<!-- All text enclosed in angled brackets are known as HTML element tags. There are usually, but not always, starting and closing element "tags", each representing a HTML element.
+The <html> element is known as the root element of a HTML page. All other elements are encased within it. -->
+<html>
+  <!-- The <head> element contains meta information about the HTML page, information that is not rendered or displayed by the browser -->
+  <head>
+    <!-- The meta tag defines meta information in the HTML document. In this case, we are defining the charset. UTF-8 allows us to use emojis in the CodeSandbox environment -->
+    <meta charset="UTF-8" />
+    <!-- The <title> element specifies a title for the HTML page (which is shown in the browser's title bar or in the page's tab) and is the default name given to a bookmark of a webpage. -->
+    <title>Basics</title>
+    <!-- The <link> element specifies a relationship between this HTML page and an external resource, namely the styles.css file here. For the syntax '../../' in '../../styles.css', we are referring to the styles.css file (in the main directory) found 2 folders above the current one. In this case, we are linking a stylesheet which is a CSS file containing information relating to the layout and style of the webpage. The syntax within the styles.css file is also referred to as CSS - Cascading Style Sheets. -->
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+
+  <!-- The <body> element defines the document's body, and is a container for all the visible contents that will be rendered by the browser.  -->
+  <body>
+    <!-- The <nav> tag semantically defines a set of navigation links. It doesn't have many properties different from a <div>, and exists purely for semantic naming. -->
+    <nav>
+      <!-- The <ul> tag represents an unordered list, where items in the list are rendered on a vertical bulleted list. While we are listing the days of the exercises on this navbar, we are positioning them horizontally without the bullets. This is done using CSS, and you can preview the syntax in styles.css (do a search for "nav ul"). -->
+      <ul>
+        <li>
+          <!-- An <a> tag defines a hyperlink, linking one page to another. The page to link to will be added to the "href" property of the tag. -->
+          <a href="../../index.html">Home</a>
+        </li>
+        <li>
+          <!-- An <a> tag defines a hyperlink, linking one page to another. The page to link to will be added to the "href" property of the tag. -->
+          <a
+            href="../../day01-data-manipulation-and-functions/in-class/index.html"
+            >Day 1</a
+          >
+        </li>
+        <li>
+          <a
+            href="../../day02-if-statements-boolean-operators/in-class/index.html"
+            >Day 2</a
+          >
+        </li>
+        <li>
+          <a href="../../day03-program-state/in-class/index.html">Day 3</a>
+        </li>
+        <li>
+          <a href="../../day04-loops/in-class/index.html">Day 4</a>
+        </li>
+        <li>
+          <a href="../../day05-mad-libs/in-class/index.html">Day 5</a>
+        </li>
+        <li>
+          <a href="../../day07-moar-cards/in-class/index.html">Day 7</a>
+        </li>
+        <li class="project">
+          <a href="../../project3-blackjack/index.html">Blackjack</a>
+        </li>
+        <li class="project">
+          <a href="../../project2-beat-that/index.html">Beat That!</a>
+        </li>
+        <li class="project">
+          <a href="../../project1-sps/index.html">Scissors Paper Stone</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- The <h1> element defines a large heading. There are 6 pre-set header elements, <h1> to <h6> -->
+    <h1 id="header">🚀 Basics Day 2: In-Class Exercises 🚀</h1>
+    <div class="flex justify-content-center">
+      <div class="button-group">
+        <a href="../pre-class/index.html" class="button-group-button"
+          >Pre-Class</a
+        >
+        <a href="../in-class/index.html" class="active button-group-button"
+          >In-Class</a
+        >
+      </div>
+    </div>
+    <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+    <hr />
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>Base: Lucky 11</h2>
+      <div class="instructions-text">
+        <p>
+          Create a dice game that allows a user input a guess number and roll 2
+          dice when the Submit button is clicked. The user wins if:
+        </p>
+        <!-- The <ol> tag represents an ordered list, where items in the list can be ordered numerically. -->
+        <ol>
+          <!-- The <li> tag represents a list item, which has to be contained in an ordered list (<ol>) or an unordered list (<ul>). -->
+          <li>One of the dice roll matches their guess, or</li>
+          <li>If the total dice roll is 11.</li>
+        </ol>
+        <p>Otherwise the user loses.</p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Input a guess number:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="lucky-11-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="lucky-11-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="lucky-11-output-div"></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>Base: Hawker Food Categorisation</h2>
+      <div class="instructions-text">
+        <p>
+          Hawker food is a convenient and affordable food option in Singapore.
+          To help educate non-Singaporeans about hawker food, create an app that
+          takes a hawker dish name as input, and tells users whether the dish
+          has a "rice", "noodle", or "other" base. Some sample dishes are:
+          "chicken rice", "roti prata", "nasi lemak", "hokkien mee", "bak kut
+          teh", and "laksa".
+        </p>
+        <p>
+          For example, if a user enters "laksa", the program should output
+          "noodle". If a user enters "roti prata", the program could output
+          "other".
+        </p>
+        <p>Please use the <code>||</code> operator.</p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Enter the name of a dish:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="hawker-food-categorisation-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="hawker-food-categorisation-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="hawker-food-categorisation-output-div"></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>Comfortable: 4D with Single-Digit Comparison</h2>
+      <div class="instructions-text">
+        <p>
+          4D is a popular betting game in Singapore run by Singapore Pools.
+          Rocket Academy does not endorse gambling.
+        </p>
+        <p>
+          Create a version of 4D where the player wins if their guess matches
+          <strong>any</strong> of the 4 digits. The player will input a
+          <strong>single</strong> digit, and the computer generates 4 random
+          digits between 0 and 9. If the player-inputted digit matches
+          <strong>any</strong> of the randomly-generated digits, the player
+          wins.
+        </p>
+        <p>
+          In addition to the win/loss result, output the player guess and all
+          randomly-generated digits so the player can see how close they were.
+        </p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Guess a single-digit number:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="four-d-single-digit-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="four-d-single-digit-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="four-d-single-digit-output-div"></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>Comfortable: Hawker Food Randomness</h2>
+      <div class="instructions-text">
+        <p>
+          The uncle at your favourite hawker stall has decided to challenge
+          himself and serve a random hawker dish to each customer. The dishes in
+          his repertoire are: "chicken rice", "roti prata", "nasi lemak",
+          "hokkien mee", "bak kut teh", and "laksa". Customers that correctly
+          guess Uncle's dish receive a free meal.
+        </p>
+        <p>
+          Create an app that uses random numbers to help Uncle decide which dish
+          to cook. The customer can only input dish names. If the customer
+          correctly guesses Uncle's dish, let her know that she gets a free
+          meal!
+        </p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Enter the name of a dish:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="hawker-food-randomness-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="hawker-food-randomness-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="hawker-food-randomness-output-div"></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>More Comfortable: 4D with Winning Range</h2>
+      <div class="instructions-text">
+        <p>
+          Create a version of 4D where the player wins if they guess within 1000
+          (above or below) of the winning 4-digit number. Consider using
+          comparison operators such as less than (<code>&lt;</code>) and greater
+          than (<code>&gt;</code>).
+        </p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Guess a number:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="four-d-winning-range-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="four-d-winning-range-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="four-d-winning-range-output-div"></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>More Comfortable: Hawker Food Omakase</h2>
+      <div class="instructions-text">
+        <p>
+          Uncle has decided to serve an omakase option, and output a menu based
+          on customer input.
+        </p>
+        <!-- The <ol> tag represents an ordered list, where items in the list can be ordered numerically. -->
+        <ol>
+          <!-- The <li> tag represents a list item, which has to be contained in an ordered list (<ol>) or an unordered list (<ul>). -->
+          <li>
+            Customers can input either "rice" or "noodle", and Uncle will choose
+            either 2 random rice or 2 random noodle dishes for them. Assume
+            Uncle's rice dishes are "chicken rice", "nasi lemak", and "bak kut
+            teh", and Uncle's noodle dishes are "hokkien mee", "laksa", and
+            "beef hor fun".
+          </li>
+          <li>
+            Roti prata is neither rice nor noodle, but Uncle can randomly choose
+            to include it as one of the two dishes if he feels like it.
+          </li>
+          <li>
+            Uncle charges more for omakase and uses premium descriptions for his
+            dishes. Feel free to get creative. To create a new line in the
+            output box you can use the string '<code>&lt;br&gt;</code>', which
+            generates a new line in HTML output.
+          </li>
+          <li>
+            Output at the end if sambal is included. Not all dishes come with
+            sambal, for example roti prata and bak kut teh don't come with
+            sambal.
+          </li>
+        </ol>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Enter either "rice" or "noodle":</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="hawker-food-omakase-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="hawker-food-omakase-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="hawker-food-omakase-output-div"></div>
+    </div>
+    <!-- Everything below this is incorporating JavaScript programming logic into the webpage. -->
+    <!-- The script tag encloses JavaScript syntax for the browser to interpret programtically -->
+    <!-- The following line imports all code written in the script.js file -->
+    <script src="script.js"></script>
+    <!-- Define button click functionality -->
+    <script>
+      // Declare and define variables that represents the Submit Button for each exercise
+      var lucky11Button = document.querySelector("#lucky-11-submit-button");
+      var hawkerFoodCategorisationButton = document.querySelector(
+        "#hawker-food-categorisation-submit-button"
+      );
+      var fourDSingleDigitButton = document.querySelector(
+        "#four-d-single-digit-submit-button"
+      );
+      var hawkerFoodRandomnessButton = document.querySelector(
+        "#hawker-food-randomness-submit-button"
+      );
+      var fourDWinningRangeButton = document.querySelector(
+        "#four-d-winning-range-submit-button"
+      );
+      var hawkerFoodOmakaseButton = document.querySelector(
+        "#hawker-food-omakase-submit-button"
+      );
+
+      // When the submit button is clicked, access the text entered by the user in the corresponding input field for the exercise
+      // And pass it as an input parameter to the various main function(s) as defined in script.js
+      lucky11Button.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector("#lucky-11-input-field");
+        // Store the output of the main function in a new variable
+        var result = lucky11Main(input.value);
+
+        // Display result in output element
+        var output = document.querySelector("#lucky-11-output-div");
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      hawkerFoodCategorisationButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector(
+          "#hawker-food-categorisation-input-field"
+        );
+        // Store the output of the main function in a new variable
+        var result = hawkerFoodCategorisationMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector(
+          "#hawker-food-categorisation-output-div"
+        );
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      fourDSingleDigitButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector("#four-d-single-digit-input-field");
+        // Store the output of the main function in a new variable
+        var result = fourDSingleDigitMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector("#four-d-single-digit-output-div");
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      hawkerFoodRandomnessButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector(
+          "#hawker-food-randomness-input-field"
+        );
+        // Store the output of the main function in a new variable
+        var result = hawkerFoodRandomnessMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector(
+          "#hawker-food-randomness-output-div"
+        );
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      fourDWinningRangeButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector("#four-d-winning-range-input-field");
+        // Store the output of the main function in a new variable
+        var result = fourDWinningRangeMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector("#four-d-winning-range-output-div");
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      hawkerFoodOmakaseButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector("#hawker-food-omakase-input-field");
+        // Store the output of the main function in a new variable
+        var result = hawkerFoodOmakaseMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector("#hawker-food-omakase-output-div");
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,304 @@
+<!--  All HTML files begin with the following line: -->
+<!DOCTYPE html>
+<!-- This indicates that the rest of the lines that follow are to be interpreted as HTML. It tells the browser about what document type to expect. -->
+
+<!-- All text enclosed in angled brackets are known as HTML element tags. There are usually, but not always, starting and closing element "tags", each representing a HTML element.
+The <html> element is known as the root element of a HTML page. All other elements are encased within it. -->
+<html>
+  <!-- The <head> element contains meta information about the HTML page, information that is not rendered or displayed by the browser -->
+  <head>
+    <!-- The meta tag defines meta information in the HTML document. In this case, we are defining the charset. UTF-8 allows us to use emojis in the CodeSandbox environment -->
+    <meta charset="UTF-8" />
+    <!-- The <title> element specifies a title for the HTML page (which is shown in the browser's title bar or in the page's tab) and is the default name given to a bookmark of a webpage. -->
+    <title>Basics</title>
+    <!-- The <link> element specifies a relationship between this HTML page and an external resource, namely the styles.css file here. For the syntax '../../' in '../../styles.css', we are referring to the styles.css file (in the main directory) found 2 folders above the current one. In this case, we are linking a stylesheet which is a CSS file containing information relating to the layout and style of the webpage. The syntax within the styles.css file is also referred to as CSS - Cascading Style Sheets. -->
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+
+  <!-- The <body> element defines the document's body, and is a container for all the visible contents that will be rendered by the browser.  -->
+  <body>
+    <!-- The <nav> tag semantically defines a set of navigation links. It doesn't have many properties different from a <div>, and exists purely for semantic naming. -->
+    <nav>
+      <!-- The <ul> tag represents an unordered list, where items in the list are rendered on a vertical bulleted list. While we are listing the days of the exercises on this navbar, we are positioning them horizontally without the bullets. This is done using CSS, and you can preview the syntax in styles.css (do a search for "nav ul"). -->
+      <ul>
+        <li>
+          <!-- An <a> tag defines a hyperlink, linking one page to another. The page to link to will be added to the "href" property of the tag. -->
+          <a href="../../index.html">Home</a>
+        </li>
+        <li>
+          <!-- An <a> tag defines a hyperlink, linking one page to another. The page to link to will be added to the "href" property of the tag. -->
+          <a
+            href="../../day01-data-manipulation-and-functions/in-class/index.html"
+            >Day 1</a
+          >
+        </li>
+        <li>
+          <a
+            href="../../day02-if-statements-boolean-operators/in-class/index.html"
+            >Day 2</a
+          >
+        </li>
+        <li>
+          <a href="../../day03-program-state/in-class/index.html">Day 3</a>
+        </li>
+        <li>
+          <a href="../../day04-loops/in-class/index.html">Day 4</a>
+        </li>
+        <li>
+          <a href="../../day05-mad-libs/in-class/index.html">Day 5</a>
+        </li>
+        <li>
+          <a href="../../day07-moar-cards/in-class/index.html">Day 7</a>
+        </li>
+        <li class="project">
+          <a href="../../project3-blackjack/index.html">Blackjack</a>
+        </li>
+        <li class="project">
+          <a href="../../project2-beat-that/index.html">Beat That!</a>
+        </li>
+        <li class="project">
+          <a href="../../project1-sps/index.html">Scissors Paper Stone</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- The <h1> element defines a large heading. There are 6 pre-set header elements, <h1> to <h6> -->
+    <h1 id="header">🚀 Basics Day 4: Pre-Class Exercises 🚀</h1>
+    <div class="flex justify-content-center">
+      <div class="button-group">
+        <a href="../pre-class/index.html" class="active button-group-button"
+          >Pre-Class</a
+        >
+        <a href="../in-class/index.html" class="button-group-button"
+          >In-Class</a
+        >
+      </div>
+    </div>
+    <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+    <hr />
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>Follow Along (Loops)</h2>
+      <div class="instructions-text">
+        <p>Follow along and implement the code in the Loops module.</p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Input:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="follow-along-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="follow-along-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="follow-along-output-div"></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>Simple Loop with Variations (Loops)</h2>
+      <div class="instructions-text">
+        <!-- The <ol> tag represents an ordered list, where items in the list can be ordered numerically. -->
+        <ol>
+          <!-- The <li> tag represents a list item, which has to be contained in an ordered list (<ol>) or an unordered list (<ul>). -->
+          <li>
+            Create a loop in the <code>simpleLoopMain</code> function. Make the
+            loop run 6 times, adding "hello" to myOutputValue with each loop
+            iteration.
+          </li>
+          <li>
+            What happens if <code>counter</code> starts as a number other than
+            zero?
+          </li>
+          <li>
+            What happens if, inside the loop, you alter the
+            <code>counter</code> by adding a number other than one?
+          </li>
+          <li>
+            What happens if you change the condition inside the loop from
+            <code>counter &lt; 6</code> to <code>counter &lt;= 6</code>?
+          </li>
+        </ol>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Input:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="simple-loop-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="simple-loop-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="simple-loop-output-div"></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>Loop within Loop (Loops)</h2>
+      <div class="instructions-text">
+        <!-- The <ol> tag represents an ordered list, where items in the list can be ordered numerically. -->
+        <ol>
+          <!-- The <li> tag represents a list item, which has to be contained in an ordered list (<ol>) or an unordered list (<ul>). -->
+          <li>
+            Create nested loops in the <code>loopWithinLoop</code> function,
+            where the outer loop runs 3 times and the inner loop runs 3 times
+            per outer loop. Concatenate <code>"hello"</code> to myOutputValue in
+            the inner loop. How many times do we see <code>"hello"</code>?
+          </li>
+          <li>
+            Add "<code>&lt;br /&gt;</code>" to <code>myOutputValue</code> in the
+            outer loop so that the program makes a new line for each outer loop.
+          </li>
+          <li>
+            What happens if <code>outerCounter</code> starts as a number other
+            than zero?
+          </li>
+          <li>
+            What happens if <code>innerCounter</code> starts as a number other
+            than zero?
+          </li>
+          <li>
+            What happens if, inside the loop, you alter
+            <code>outerCounter</code> by adding a number other than one?
+          </li>
+          <li>
+            What happens if, inside the loop, you alter
+            <code>innerCounter</code> by adding a number other than one?
+          </li>
+          <li>
+            What happens if you change the outer loop condition from
+            <code>outerCounter &lt; 3</code> to
+            <code>outerCounter &lt;= 3</code>?
+          </li>
+          <li>
+            What happens if you change the outer loop condition from
+            <code>innerCounter &lt; 3</code> to
+            <code>innerCounter &lt;= 3</code>?
+          </li>
+          <li>
+            Update loop conditions to use <code>input</code> to control how many
+            times the loops run.
+          </li>
+          <li>
+            Update our code such that the inner loop runs twice the number of
+            times as the outer loop. How many more times do we see
+            <code>"hello"</code>?
+          </li>
+        </ol>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Input:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="loop-within-loop-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="loop-within-loop-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="loop-within-loop-output-div"></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>Infinite Loop (Loops)</h2>
+      <div class="instructions-text">
+        <p>
+          Make a loop that never stops running. Be prepared to stop/kill this
+          Chrome tab, because it will freeze.
+        </p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Input:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="infinite-loop-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="infinite-loop-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="infinite-loop-output-div"></div>
+    </div>
+    <!-- Everything below this is incorporating JavaScript programming logic into the webpage. -->
+    <!-- The script tag encloses JavaScript syntax for the browser to interpret programtically -->
+    <!-- The following line imports all code written in the script.js file -->
+    <script src="script.js"></script>
+    <!-- Define button click functionality -->
+    <script>
+      // Declare and define variables that represents the Submit Button for each exercise
+      var followAlongButton = document.querySelector(
+        "#follow-along-submit-button"
+      );
+      var simpleLoopButton = document.querySelector(
+        "#simple-loop-submit-button"
+      );
+      var loopWithinLoopButton = document.querySelector(
+        "#loop-within-loop-submit-button"
+      );
+      var infiniteLoopButton = document.querySelector(
+        "#infinite-loop-submit-button"
+      );
+
+      // When the submit button is clicked, access the text entered by the user in the input field
+      // And pass it as an input parameter to the main function as defined in script.js
+      followAlongButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector("#follow-along-input-field");
+        // Store the output of the main function in a new variable
+        var result = followAlongMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector("#follow-along-output-div");
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      simpleLoopButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector("#simple-loop-input-field");
+        // Store the output of the main function in a new variable
+        var result = simpleLoopMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector("#simple-loop-output-div");
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      loopWithinLoopButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector("#loop-within-loop-input-field");
+        // Store the output of the main function in a new variable
+        var result = loopWithinLoopMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector("#loop-within-loop-output-div");
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      infiniteLoopButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector("#infinite-loop-input-field");
+        // Store the output of the main function in a new variable
+        var result = infiniteLoopMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector("#infinite-loop-output-div");
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+    </script>
+  </body>
+</html>

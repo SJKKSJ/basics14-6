@@ -1,0 +1,347 @@
+<!--  All HTML files begin with the following line: -->
+<!DOCTYPE html>
+<!-- This indicates that the rest of the lines that follow are to be interpreted as HTML. It tells the browser about what document type to expect. -->
+
+<!-- All text enclosed in angled brackets are known as HTML element tags. There are usually, but not always, starting and closing element "tags", each representing a HTML element.
+The <html> element is known as the root element of a HTML page. All other elements are encased within it. -->
+<html>
+  <!-- The <head> element contains meta information about the HTML page, information that is not rendered or displayed by the browser -->
+  <head>
+    <!-- The meta tag defines meta information in the HTML document. In this case, we are defining the charset. UTF-8 allows us to use emojis in the CodeSandbox environment -->
+    <meta charset="UTF-8" />
+    <!-- The <title> element specifies a title for the HTML page (which is shown in the browser's title bar or in the page's tab) and is the default name given to a bookmark of a webpage. -->
+    <title>Basics</title>
+    <!-- The <link> element specifies a relationship between this HTML page and an external resource, namely the styles.css file here. For the syntax '../../' in '../../styles.css', we are referring to the styles.css file (in the main directory) found 2 folders above the current one. In this case, we are linking a stylesheet which is a CSS file containing information relating to the layout and style of the webpage. The syntax within the styles.css file is also referred to as CSS - Cascading Style Sheets. -->
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+
+  <!-- The <body> element defines the document's body, and is a container for all the visible contents that will be rendered by the browser.  -->
+  <body>
+    <!-- The <nav> tag semantically defines a set of navigation links. It doesn't have many properties different from a <div>, and exists purely for semantic naming. -->
+    <nav>
+      <!-- The <ul> tag represents an unordered list, where items in the list are rendered on a vertical bulleted list. While we are listing the days of the exercises on this navbar, we are positioning them horizontally without the bullets. This is done using CSS, and you can preview the syntax in styles.css (do a search for "nav ul"). -->
+      <ul>
+        <li>
+          <!-- An <a> tag defines a hyperlink, linking one page to another. The page to link to will be added to the "href" property of the tag. -->
+          <a href="../../index.html">Home</a>
+        </li>
+        <li>
+          <!-- An <a> tag defines a hyperlink, linking one page to another. The page to link to will be added to the "href" property of the tag. -->
+          <a
+            href="../../day01-data-manipulation-and-functions/in-class/index.html"
+            >Day 1</a
+          >
+        </li>
+        <li>
+          <a
+            href="../../day02-if-statements-boolean-operators/in-class/index.html"
+            >Day 2</a
+          >
+        </li>
+        <li>
+          <a href="../../day03-program-state/in-class/index.html">Day 3</a>
+        </li>
+        <li>
+          <a href="../../day04-loops/in-class/index.html">Day 4</a>
+        </li>
+        <li>
+          <a href="../../day05-mad-libs/in-class/index.html">Day 5</a>
+        </li>
+        <li>
+          <a href="../../day07-moar-cards/in-class/index.html">Day 7</a>
+        </li>
+        <li class="project">
+          <a href="../../project3-blackjack/index.html">Blackjack</a>
+        </li>
+        <li class="project">
+          <a href="../../project2-beat-that/index.html">Beat That!</a>
+        </li>
+        <li class="project">
+          <a href="../../project1-sps/index.html">Scissors Paper Stone</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- The <h1> element defines a large heading. There are 6 pre-set header elements, <h1> to <h6> -->
+    <h1 id="header">🚀 Basics Day 1: Pre-Class Exercises 🚀</h1>
+    <div class="flex justify-content-center">
+      <div class="button-group">
+        <a href="../pre-class/index.html" class="active button-group-button"
+          >Pre-Class</a
+        >
+        <a href="../in-class/index.html" class="button-group-button"
+          >In-Class</a
+        >
+      </div>
+    </div>
+    <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+    <hr />
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>Default Template (Our First Program)</h2>
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Input:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="output-div"></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>Greeting Program (Our First Program)</h2>
+      <div class="instructions-text">
+        <p>
+          We will now create a program with purpose. The user will type their
+          name, and we will use the name to greet them. To do this we'll take
+          input and combine it with other strings to generate output.
+        </p>
+        <p>
+          Change your program output to a different message. Make it longer. You
+          can even use <code>input</code> more than once, for example, "Hello,
+          Susan! Wow, Susan is a great name. Reminds me of this movie star..."
+        </p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Input:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="greeting-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="greeting-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="greeting-output-div"></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>Metric Conversion Program (Our First Program)</h2>
+      <div class="instructions-text">
+        <p>
+          Let's incorporate math operations. The user will now enter a distance
+          in kilometres and the program will output the distance in miles. 1 km
+          equals 0.62 miles.
+        </p>
+        <p>
+          Change <code>myOutputValue</code> to see the calculation on screen.
+        </p>
+        <p>
+          Try changing <code>distanceInKm</code> to see new conversions. To let
+          the user input distances, assign the value of <code>input</code> to
+          <code>distanceInKm</code>.
+        </p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Input:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="metric-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="metric-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="metric-output-div"></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>Base: Run Example Code (Functions I)</h2>
+      <div class="instructions-text">
+        <!-- The <ol> tag represents an ordered list, where items in the list can be ordered numerically. -->
+        <ol>
+          <!-- The <li> tag represents a list item, which has to be contained in an ordered list (<ol>) or an unordered list (<ul>). -->
+          <li>Duplicate and run the code from the Functions I module</li>
+          <li>
+            Paste the other function examples in instead of
+            <code>convertKmToMiles</code>
+          </li>
+          <li>
+            Remove the <code>return</code> statements from the examples. What
+            happens and why? What does the <code>return</code> statement do and
+            how does it work?
+          </li>
+          <li>
+            Remove the <code>distanceInKm</code> parameter from the function
+            definition. What happens and why? Replace the parameter afterward.
+          </li>
+          <li>
+            Change the variable name <code>distanceInKm</code> to another name
+            everywhere. What happens and why? Change the name back to
+            <code>distanceInKm</code> afterward.
+          </li>
+        </ol>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Input:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="functions-example-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="functions-example-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="functions-example-output-div"></div>
+    </div>
+    <div class="container">
+      <h2>Comfortable: Train Speed (Functions I)</h2>
+      <div class="instructions-text">
+        <p>
+          Two trains are leaving to Tokyo. Train 1 is traveling 200kph, and will
+          reach Tokyo in 2 hours. Train 2 is newer and can travel faster, but is
+          delayed due to a signalling fault.
+        </p>
+        <p>
+          Build a program for Train 2's conductor to calculate how fast Train 2
+          needs to travel to arrive at Tokyo at the same time as Train 1, based
+          on how long it was delayed. Output the speed in kph.
+        </p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Input:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="train-speed-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="train-speed-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="train-speed-output-div"></div>
+    </div>
+    <div class="container">
+      <h2>More Comfortable: Clock (Functions I)</h2>
+      <div class="instructions-text">
+        <p>
+          A user can enter the number of minutes past 1pm and the app will
+          calculate the angle between the hour and minute hand. You are free to
+          decide how else your clock will work: if the minute hand moves in 5
+          minute increments or moves every second, etc.
+        </p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Input:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="clock-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="clock-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="clock-output-div"></div>
+    </div>
+    <!-- Everything below this is incorporating JavaScript programming logic into the webpage. -->
+    <!-- The script tag encloses JavaScript syntax for the browser to interpret programtically -->
+    <!-- The following line imports all code written in the script.js file -->
+    <script src="script.js"></script>
+    <!-- Define button click functionality -->
+    <script>
+      // Declare and define variables that represents the Submit Button for each exercise
+      var button = document.querySelector("#submit-button");
+      var greetingButton = document.querySelector("#greeting-submit-button");
+      var metricButton = document.querySelector("#metric-submit-button");
+      var functionsExampleButton = document.querySelector(
+        "#functions-example-submit-button"
+      );
+      var trainSpeedButton = document.querySelector(
+        "#train-speed-submit-button"
+      );
+      var clockButton = document.querySelector("#clock-submit-button");
+
+      // When the submit button is clicked, access the text entered by the user in the input field
+      // And pass it as an input parameter to the main function as defined in script.js
+      button.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector("#input-field");
+        // Store the output of main() in a new variable
+        var result = main(input.value);
+
+        // Display result in output element
+        var output = document.querySelector("#output-div");
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      greetingButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector("#greeting-input-field");
+        // Store the output of the main function in a new variable
+        var result = greetingMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector("#greeting-output-div");
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      metricButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector("#metric-input-field");
+        // Store the output of the main function in a new variable
+        var result = metricMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector("#metric-output-div");
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      functionsExampleButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector("#functions-example-input-field");
+        // Store the output of the main function in a new variable
+        var result = functionsExampleMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector("#functions-example-output-div");
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      trainSpeedButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector("#train-speed-input-field");
+        // Store the output of the main function in a new variable
+        var result = trainSpeedMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector("#train-speed-output-div");
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      clockButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector("#clock-input-field");
+        // Store the output of the main function in a new variable
+        var result = clockMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector("#clock-output-div");
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+    </script>
+  </body>
+</html>

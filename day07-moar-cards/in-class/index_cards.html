@@ -1,0 +1,542 @@
+<!--  All HTML files begin with the following line: -->
+<!DOCTYPE html>
+<!-- This indicates that the rest of the lines that follow are to be interpreted as HTML. It tells the browser about what document type to expect. -->
+
+<!-- All text enclosed in angled brackets are known as HTML element tags. There are usually, but not always, starting and closing element "tags", each representing a HTML element.
+The <html> element is known as the root element of a HTML page. All other elements are encased within it. -->
+<html>
+  <!-- The <head> element contains meta information about the HTML page, information that is not rendered or displayed by the browser -->
+  <head>
+    <!-- The meta tag defines meta information in the HTML document. In this case, we are defining the charset. UTF-8 allows us to use emojis in the CodeSandbox environment -->
+    <meta charset="UTF-8" />
+    <!-- The <title> element specifies a title for the HTML page (which is shown in the browser's title bar or in the page's tab) and is the default name given to a bookmark of a webpage. -->
+    <title>Basics</title>
+    <!-- The <link> element specifies a relationship between this HTML page and an external resource, namely the styles.css file here. For the syntax '../../' in '../../styles.css', we are referring to the styles.css file (in the main directory) found 2 folders above the current one. In this case, we are linking a stylesheet which is a CSS file containing information relating to the layout and style of the webpage. The syntax within the styles.css file is also referred to as CSS - Cascading Style Sheets. -->
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+
+  <!-- The <body> element defines the document's body, and is a container for all the visible contents that will be rendered by the browser.  -->
+  <body>
+    <!-- The <nav> tag semantically defines a set of navigation links. It doesn't have many properties different from a <div>, and exists purely for semantic naming. -->
+    <nav>
+      <!-- The <ul> tag represents an unordered list, where items in the list are rendered on a vertical bulleted list. While we are listing the days of the exercises on this navbar, we are positioning them horizontally without the bullets. This is done using CSS, and you can preview the syntax in styles.css (do a search for "nav ul"). -->
+      <ul>
+        <li>
+          <!-- An <a> tag defines a hyperlink, linking one page to another. The page to link to will be added to the "href" property of the tag. -->
+          <a href="../../index.html">Home</a>
+        </li>
+        <li>
+          <!-- An <a> tag defines a hyperlink, linking one page to another. The page to link to will be added to the "href" property of the tag. -->
+          <a
+            href="../../day01-data-manipulation-and-functions/in-class/index.html"
+            >Day 1</a
+          >
+        </li>
+        <li>
+          <a
+            href="../../day02-if-statements-boolean-operators/in-class/index.html"
+            >Day 2</a
+          >
+        </li>
+        <li>
+          <a href="../../day03-program-state/in-class/index.html">Day 3</a>
+        </li>
+        <li>
+          <a href="../../day04-loops/in-class/index.html">Day 4</a>
+        </li>
+        <li>
+          <a href="../../day05-mad-libs/in-class/index.html">Day 5</a>
+        </li>
+        <li>
+          <a href="../../day07-moar-cards/in-class/index.html">Day 7</a>
+        </li>
+        <li class="project">
+          <a href="../../project3-blackjack/index.html">Blackjack</a>
+        </li>
+        <li class="project">
+          <a href="../../project2-beat-that/index.html">Beat That!</a>
+        </li>
+        <li class="project">
+          <a href="../../project1-sps/index.html">Scissors Paper Stone</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- The <h1> element defines a large heading. There are 6 pre-set header elements, <h1> to <h6> -->
+    <h1 id="header">🚀 Basics Day 7: In-Class Exercises 🚀</h1>
+    <div class="flex justify-content-center">
+      <div class="button-group">
+        <a href="../pre-class/index.html" class="button-group-button"
+          >Pre-Class</a
+        >
+        <a href="../in-class/index.html" class="active button-group-button"
+          >In-Class</a
+        >
+      </div>
+    </div>
+    <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+    <hr />
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>Base: Moar Cards Display Single Card</h2>
+      <div class="instructions-text">
+        <p>
+          Build an app using the pre-class deck functions such that when the
+          user clicks Submit, draw a single card from a shuffled deck and show
+          it to them.
+        </p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Input:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="moar-cards-single-card-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="moar-cards-single-card-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="moar-cards-single-card-output-div"></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>Base: Moar Cards Low Card</h2>
+      <div class="instructions-text">
+        <p>
+          Implement the High Card game from 9.1: Objects with 1 difference: the
+          winner is the person with the <strong>lowest</strong> card.
+        </p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Input:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="moar-cards-low-card-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="moar-cards-low-card-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="moar-cards-low-card-output-div"></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>Base: Moar Cards Low Card with Queen Winner</h2>
+      <div class="instructions-text">
+        <p>
+          Alter the Low Card game such that if any player draws a Queen, they
+          win.
+        </p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Input:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="moar-cards-low-card-queen-winner-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="moar-cards-low-card-queen-winner-submit-button">
+        Submit
+      </button>
+      <p>Output:</p>
+      <div
+        class="output-div"
+        id="moar-cards-low-card-queen-winner-output-div"
+      ></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>Base: Moar Cards Low Card Hands</h2>
+      <div class="instructions-text">
+        <p>
+          The player can input how many cards they want. The lowest of the
+          player's cards is compared against the computer's 1 card. Show the
+          player all the cards that they drew. Rules from above exercises
+          continue to apply.
+        </p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Input:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="moar-cards-low-card-hands-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="moar-cards-low-card-hands-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="moar-cards-low-card-hands-output-div"></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>Base: Moar Cards Low Card Suit Output</h2>
+      <div class="instructions-text">
+        <p>
+          Implement a nice-looking output for Low Card. Use a helper function to
+          display each card nicely with emoji (♠️, ♥️, etc.). Try to avoid
+          repeating code if possible.
+        </p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Input:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="moar-cards-low-card-suit-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="moar-cards-low-card-suit-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="moar-cards-low-card-suit-output-div"></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>More Comfortable: Moar Cards Low Card with Wild Card</h2>
+      <div class="instructions-text">
+        <p>
+          Update our latest Low Card implementation with the following twist. At
+          the beginning of the game, pick (but do not draw) a random card in the
+          deck to be the Wild Card. If either player draws the Wild Card, that
+          player automatically wins.
+        </p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Input:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="moar-cards-low-card-wild-card-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="moar-cards-low-card-wild-card-submit-button">Submit</button>
+      <p>Output:</p>
+      <div
+        class="output-div"
+        id="moar-cards-low-card-wild-card-output-div"
+      ></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>
+        More Comfortable: Moar Cards Low Card with Player-Chosen Wild Card
+      </h2>
+      <div class="instructions-text">
+        <p>
+          Same rules as Low Card with Wild Card, except at the beginning of the
+          game the player names a single card as input to be the Wild Card. The
+          Wild Card can be identified with a card name and suit.
+        </p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Input:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="moar-cards-low-card-wild-player-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="moar-cards-low-card-wild-player-submit-button">Submit</button>
+      <p>Output:</p>
+      <div
+        class="output-div"
+        id="moar-cards-low-card-wild-player-output-div"
+      ></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>More Comfortable: Moar Cards Low Card with Bets</h2>
+      <div class="instructions-text">
+        <p>
+          Allow the player to wager points on each round. Add a new mode for the
+          beginning of each round where the player selects the number of points
+          to wager. They win the wagered points if they win, and lose the points
+          if they lose or draw. The player begins with 100 points. After each
+          round, output the player's remaining points.
+        </p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Input:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="moar-cards-low-card-bets-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="moar-cards-low-card-bets-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="moar-cards-low-card-bets-output-div"></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>More Comfortable: Moar Cards Low Card 2-Player Mode</h2>
+      <div class="instructions-text">
+        <p>
+          2 human players play against each other. The computer draws 3 cards
+          for each player at the start of the game. The players take turns
+          playing 1 card from their hand at a time. For each card played per
+          player, the lowest card wins. The player that wins the best of 3 wins
+          overall. The grey box will tell the players to switch so they don't
+          see each other's cards.
+        </p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Input:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="moar-cards-low-card-2p-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="moar-cards-low-card-2p-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="moar-cards-low-card-2p-output-div"></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>More Comfortable: Moar Cards Low Card 2-Player Mode with Pairs</h2>
+      <div class="instructions-text">
+        <p>
+          Update the previous game logic such that if any player gets a pair in
+          their hand, they win.
+        </p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Input:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="moar-cards-low-card-2pairs-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="moar-cards-low-card-2pairs-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="moar-cards-low-card-2pairs-output-div"></div>
+    </div>
+    <!-- Everything below this is incorporating JavaScript programming logic into the webpage. -->
+    <!-- The script tag encloses JavaScript syntax for the browser to interpret programtically -->
+    <!-- The following line imports all code written in the script.js file -->
+    <script src="script.js"></script>
+    <!-- Define button click functionality -->
+    <script>
+      // Declare and define variables that represents the Submit Button for each exercise
+      var moarCardsSingleCardButton = document.querySelector(
+        "#moar-cards-single-card-submit-button"
+      );
+      var moarCardsLowCardButton = document.querySelector(
+        "#moar-cards-low-card-submit-button"
+      );
+      var moarCardsLowCardQueenWinnerButton = document.querySelector(
+        "#moar-cards-low-card-queen-winner-submit-button"
+      );
+      var moarCardsLowCardHandsButton = document.querySelector(
+        "#moar-cards-low-card-hands-submit-button"
+      );
+      var moarCardsLowCardSuitButton = document.querySelector(
+        "#moar-cards-low-card-suit-submit-button"
+      );
+      var moarCardsLowCardWildCardButton = document.querySelector(
+        "#moar-cards-low-card-wild-card-submit-button"
+      );
+      var moarCardsLowCardWildPlayerButton = document.querySelector(
+        "#moar-cards-low-card-wild-player-submit-button"
+      );
+      var moarCardsLowCardBetsButton = document.querySelector(
+        "#moar-cards-low-card-bets-submit-button"
+      );
+      var moarCardsLowCard2PButton = document.querySelector(
+        "#moar-cards-low-card-2p-submit-button"
+      );
+      var moarCardsLowCard2PairsButton = document.querySelector(
+        "#moar-cards-low-card-2pairs-submit-button"
+      );
+
+      // When the submit button is clicked, access the text entered by the user in the input field
+      // And pass it as an input parameter to the main function as defined in script.js
+      moarCardsSingleCardButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector(
+          "#moar-cards-single-card-input-field"
+        );
+        // Store the output of the main function in a new variable
+        var result = moarCardsSingleCardMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector(
+          "#moar-cards-single-card-output-div"
+        );
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      moarCardsLowCardButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector("#moar-cards-low-card-input-field");
+        // Store the output of the main function in a new variable
+        var result = moarCardsLowCardMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector("#moar-cards-low-card-output-div");
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      moarCardsLowCardQueenWinnerButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector(
+          "#moar-cards-low-card-queen-winner-input-field"
+        );
+        // Store the output of the main function in a new variable
+        var result = moarCardsLowCardQueenWinnerMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector(
+          "#moar-cards-low-card-queen-winner-output-div"
+        );
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      moarCardsLowCardHandsButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector(
+          "#moar-cards-low-card-hands-input-field"
+        );
+        // Store the output of the main function in a new variable
+        var result = moarCardsLowCardHandsMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector(
+          "#moar-cards-low-card-hands-output-div"
+        );
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      moarCardsLowCardSuitButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector(
+          "#moar-cards-low-card-suit-input-field"
+        );
+        // Store the output of the main function in a new variable
+        var result = moarCardsLowCardSuitMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector(
+          "#moar-cards-low-card-suit-output-div"
+        );
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      moarCardsLowCardWildCardButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector(
+          "#moar-cards-low-card-wild-card-input-field"
+        );
+        // Store the output of the main function in a new variable
+        var result = moarCardsLowCardWildCardMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector(
+          "#moar-cards-low-card-wild-card-output-div"
+        );
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      moarCardsLowCardWildPlayerButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector(
+          "#moar-cards-low-card-wild-player-input-field"
+        );
+        // Store the output of the main function in a new variable
+        var result = moarCardsLowCardWildPlayerMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector(
+          "#moar-cards-low-card-wild-player-output-div"
+        );
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      moarCardsLowCardBetsButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector(
+          "#moar-cards-low-card-bets-input-field"
+        );
+        // Store the output of the main function in a new variable
+        var result = moarCardsLowCardBetsMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector(
+          "#moar-cards-low-card-bets-output-div"
+        );
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      moarCardsLowCard2PButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector(
+          "#moar-cards-low-card-2p-input-field"
+        );
+        // Store the output of the main function in a new variable
+        var result = moarCardsLowCard2PMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector(
+          "#moar-cards-low-card-2p-output-div"
+        );
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      moarCardsLowCard2PairsButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector(
+          "#moar-cards-low-card-2pairs-input-field"
+        );
+        // Store the output of the main function in a new variable
+        var result = moarCardsLowCard2PairsMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector(
+          "#moar-cards-low-card-2pairs-output-div"
+        );
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+    </script>
+  </body>
+</html>

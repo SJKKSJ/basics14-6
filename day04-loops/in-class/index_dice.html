@@ -1,0 +1,315 @@
+<!--  All HTML files begin with the following line: -->
+<!DOCTYPE html>
+<!-- This indicates that the rest of the lines that follow are to be interpreted as HTML. It tells the browser about what document type to expect. -->
+
+<!-- All text enclosed in angled brackets are known as HTML element tags. There are usually, but not always, starting and closing element "tags", each representing a HTML element.
+The <html> element is known as the root element of a HTML page. All other elements are encased within it. -->
+<html>
+  <!-- The <head> element contains meta information about the HTML page, information that is not rendered or displayed by the browser -->
+  <head>
+    <!-- The meta tag defines meta information in the HTML document. In this case, we are defining the charset. UTF-8 allows us to use emojis in the CodeSandbox environment -->
+    <meta charset="UTF-8" />
+    <!-- The <title> element specifies a title for the HTML page (which is shown in the browser's title bar or in the page's tab) and is the default name given to a bookmark of a webpage. -->
+    <title>Basics</title>
+    <!-- The <link> element specifies a relationship between this HTML page and an external resource, namely the styles.css file here. For the syntax '../../' in '../../styles.css', we are referring to the styles.css file (in the main directory) found 2 folders above the current one. In this case, we are linking a stylesheet which is a CSS file containing information relating to the layout and style of the webpage. The syntax within the styles.css file is also referred to as CSS - Cascading Style Sheets. -->
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+
+  <!-- The <body> element defines the document's body, and is a container for all the visible contents that will be rendered by the browser.  -->
+  <body>
+    <!-- The <nav> tag semantically defines a set of navigation links. It doesn't have many properties different from a <div>, and exists purely for semantic naming. -->
+    <nav>
+      <!-- The <ul> tag represents an unordered list, where items in the list are rendered on a vertical bulleted list. While we are listing the days of the exercises on this navbar, we are positioning them horizontally without the bullets. This is done using CSS, and you can preview the syntax in styles.css (do a search for "nav ul"). -->
+      <ul>
+        <li>
+          <!-- An <a> tag defines a hyperlink, linking one page to another. The page to link to will be added to the "href" property of the tag. -->
+          <a href="../../index.html">Home</a>
+        </li>
+        <li>
+          <!-- An <a> tag defines a hyperlink, linking one page to another. The page to link to will be added to the "href" property of the tag. -->
+          <a
+            href="../../day01-data-manipulation-and-functions/in-class/index.html"
+            >Day 1</a
+          >
+        </li>
+        <li>
+          <a
+            href="../../day02-if-statements-boolean-operators/in-class/index.html"
+            >Day 2</a
+          >
+        </li>
+        <li>
+          <a href="../../day03-program-state/in-class/index.html">Day 3</a>
+        </li>
+        <li>
+          <a href="../../day04-loops/in-class/index.html">Day 4</a>
+        </li>
+        <li>
+          <a href="../../day05-mad-libs/in-class/index.html">Day 5</a>
+        </li>
+        <li>
+          <a href="../../day07-moar-cards/in-class/index.html">Day 7</a>
+        </li>
+        <li class="project">
+          <a href="../../project3-blackjack/index.html">Blackjack</a>
+        </li>
+        <li class="project">
+          <a href="../../project2-beat-that/index.html">Beat That!</a>
+        </li>
+        <li class="project">
+          <a href="../../project1-sps/index.html">Scissors Paper Stone</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- The <h1> element defines a large heading. There are 6 pre-set header elements, <h1> to <h6> -->
+    <h1 id="header">🚀 Basics Day 4: In-Class Exercises 🚀</h1>
+    <div class="flex justify-content-center">
+      <div class="button-group">
+        <a href="../pre-class/index.html" class="button-group-button"
+          >Pre-Class</a
+        >
+        <a href="../in-class/index.html" class="active button-group-button"
+          >In-Class</a
+        >
+      </div>
+    </div>
+    <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+    <hr />
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>Base: Multi-Dice Game</h2>
+      <div class="instructions-text">
+        <p>More dice rolling and guessing!</p>
+        <!-- The <ol> tag represents an ordered list, where items in the list can be ordered numerically. -->
+        <ol>
+          <!-- The <li> tag represents a list item, which has to be contained in an ordered list (<ol>) or an unordered list (<ul>). -->
+          <li>
+            Create a dice-guessing game with a variable number of dice rolls
+            determined by the user.
+          </li>
+          <li>The game will have 2 modes.</li>
+          <li>
+            In the 1st mode, the user will enter the number of dice they wish to
+            roll.
+          </li>
+          <li>
+            In the 2nd mode, the user will enter a guess that will apply to all
+            dice rolls. For example, if the user has chosen to roll 2 dice in
+            Mode 1 and guesses 4 in Mode 2, that guess of 4 will apply to both
+            Dice 1 and Dice 2.
+          </li>
+          <li>
+            After the user guesses, the program will run a loop where the number
+            of iterations is the number of dice rolls from Mode 1. Each loop
+            iteration will roll a dice and verify if the user has won.
+          </li>
+          <li>
+            If the user guesses correctly for any of the dice rolls, the user
+            wins.
+          </li>
+          <li>
+            The game keeps track of and outputs the overall win-loss record.
+          </li>
+        </ol>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Input:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="multi-dice-base-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="multi-dice-base-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="multi-dice-base-output-div"></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>More Comfortable: Multi-Round Multi-Dice Game</h2>
+      <div class="instructions-text">
+        <!-- The <ol> tag represents an ordered list, where items in the list can be ordered numerically. -->
+        <ol>
+          <!-- The <li> tag represents a list item, which has to be contained in an ordered list (<ol>) or an unordered list (<ul>). -->
+          <li>
+            Alter the previous multi-dice game such that the user plays 4 rounds
+            in the 2nd mode.
+          </li>
+          <li>
+            After the user enters their guess in Mode 2, the program enters a
+            loop that runs 4 rounds.
+          </li>
+          <li>
+            Within each round the game will roll the number of dice the user
+            specified and compare them with the single user guess.
+          </li>
+          <li>
+            If the user guessed correctly for any dice rolls in a round, they
+            win that round.
+          </li>
+          <li>
+            The game will continue to output overall win-loss record, where each
+            of the 4 rounds count as wins or losses.
+          </li>
+        </ol>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Input:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="multi-dice-multi-round-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="multi-dice-multi-round-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="multi-dice-multi-round-output-div"></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>More Comfortable: Two Player Multi-Round Multi-Dice Game</h2>
+      <div class="instructions-text">
+        <!-- The <ol> tag represents an ordered list, where items in the list can be ordered numerically. -->
+        <ol>
+          <!-- The <li> tag represents a list item, which has to be contained in an ordered list (<ol>) or an unordered list (<ul>). -->
+          <li>Change the game to support 2 players, starting with Player 1.</li>
+          <li>
+            The gameplay follows the multi-round multi-dice game above. After
+            each player's turn, that player will have won between 0 and 4
+            rounds, because each player plays 4 rounds per turn.
+          </li>
+          <li>
+            The game alternates between players indefinitely and outputs
+            win-loss record for each player.
+          </li>
+        </ol>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Input:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="multi-dice-two-player-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="multi-dice-two-player-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="multi-dice-two-player-output-div"></div>
+    </div>
+    <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div class="container">
+      <h2>More Comfortable: Multi-Player Multi-Round Multi-Dice Game</h2>
+      <div class="instructions-text">
+        <p>
+          Change the game to ask how many players are playing the game. Players
+          will take turns playing the game as above.
+        </p>
+      </div>
+      <!-- The <hr> tag represents a horizontal rule. It is used if you want to add line dividers across your page. -->
+      <hr />
+      <!-- The <p> tag defines a paragraph element. -->
+      <p>Input:</p>
+      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
+      <input id="multi-dice-multi-player-input-field" />
+      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
+      <br />
+      <!-- The <button> tag represents.. you guessed it! a button. -->
+      <button id="multi-dice-multi-player-submit-button">Submit</button>
+      <p>Output:</p>
+      <div class="output-div" id="multi-dice-multi-player-output-div"></div>
+    </div>
+    <!-- Everything below this is incorporating JavaScript programming logic into the webpage. -->
+    <!-- The script tag encloses JavaScript syntax for the browser to interpret programtically -->
+    <!-- The following line imports all code written in the script.js file -->
+    <script src="script.js"></script>
+    <!-- Define button click functionality -->
+    <script>
+      // Declare and define variables that represents the Submit Button for each exercise
+      var multiDiceBaseButton = document.querySelector(
+        "#multi-dice-base-submit-button"
+      );
+      var multiDiceMultiRoundButton = document.querySelector(
+        "#multi-dice-multi-round-submit-button"
+      );
+      var multiDiceTwoPlayerButton = document.querySelector(
+        "#multi-dice-two-player-submit-button"
+      );
+      var multiDiceMultiPlayerButton = document.querySelector(
+        "#multi-dice-multi-player-submit-button"
+      );
+
+      // When the submit button is clicked, access the text entered by the user in the input field
+      // And pass it as an input parameter to the main function as defined in script.js
+      multiDiceBaseButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector("#multi-dice-base-input-field");
+        // Store the output of the main function in a new variable
+        var result = multiDiceBaseMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector("#multi-dice-base-output-div");
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      multiDiceMultiRoundButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector(
+          "#multi-dice-multi-round-input-field"
+        );
+        // Store the output of the main function in a new variable
+        var result = multiDiceMultiRoundMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector(
+          "#multi-dice-multi-round-output-div"
+        );
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      multiDiceTwoPlayerButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector(
+          "#multi-dice-two-player-input-field"
+        );
+        // Store the output of the main function in a new variable
+        var result = multiDiceTwoPlayerMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector(
+          "#multi-dice-two-player-output-div"
+        );
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+
+      multiDiceMultiPlayerButton.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector(
+          "#multi-dice-multi-player-input-field"
+        );
+        // Store the output of the main function in a new variable
+        var result = multiDiceMultiPlayerMain(input.value);
+
+        // Display result in output element
+        var output = document.querySelector(
+          "#multi-dice-multi-player-output-div"
+        );
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+    </script>
+  </body>
+</html>
