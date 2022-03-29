@@ -123,7 +123,7 @@ var randomDiceMain = function (input) {
 var secretPhraseMain = function (input) {
   // Attempt the Secret Phrase exercise from the If, Else, Else If module below with secretPhraseMain as the main function.
   // default value for output
-  var myOutputValue = "hello world";
+  var myOutputValue = "the door shall not open";
   // var myOutputValue = "the door shall not open!";
 
   // If input is our secret phrase, change the value of myOutputValue
@@ -142,12 +142,14 @@ var secretPhraseMain = function (input) {
 
   // if input is not our secret phrase
   // testing if the phrase is not equal to palatable papaya
-  if (input != "palatable papaya") {
-    myOutputValue = "the door shall not open!";
-  } else {
+  if (
+    input == "palatable papaya" ||
+    input == "neat noodles" ||
+    input == "awesome ayam" ||
+    input == "delicious dumplings"
+  ) {
     myOutputValue = "you wrote the secret phrase!";
   }
-
   // return output
   return myOutputValue;
 };
@@ -158,6 +160,7 @@ var diceGameMain = function (input) {
   // Attempt the Dice Game exercise from the If, Else, Else If module below with diceGameMain as the main function.
   // generate a random dice number
   var randomDiceNumber = rollDice();
+  // var randomDiceNumber2 = rollDice();
   // Default output value is 'you lose'
   var myOutputValue = "you lose";
   // If input matches randomDiceNumber, update output.
@@ -172,6 +175,9 @@ var diceGameMain = function (input) {
   // Return output
   return myOutputValue;
 };
+
+// Even Easier Dice Game
+// More Comfortable Exercises
 
 // 3.2.1 Exercise
 
@@ -209,3 +215,5 @@ var twiceGuessMain = function (input) {
 // Greater than or Less Than > or <
 // Greater or Equals to >=
 // Less or Equals to <=
+
+// 3.3.2 New Winning Conditions Exercise
