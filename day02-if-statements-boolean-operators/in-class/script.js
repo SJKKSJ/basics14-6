@@ -38,7 +38,7 @@ var randomNumber = function (input) {
   var returnNum = Math.floor(randomNum);
   return returnNum;
 };
-​
+
 var fourDSingleDigitMain = function (input) {
   // create a function that randomly generates a number between 0 and 9
   var myOutputValue = "You lose";
@@ -52,7 +52,7 @@ var fourDSingleDigitMain = function (input) {
   }
   //create four variables to capture four different numbers
   // Complete the Comfortable: 4D with Single-Digit Comparison exercise below with fourDSingleDigitMain as the main function.
-  return `${totoNumber}  ${myOutputValue}`;
+  return `You entered: ${input} Winning Number: ${totoNumber}  ${myOutputValue}`;
 };
 
 var hawkerFoodRandomnessMain = function (input) {
@@ -63,7 +63,15 @@ var hawkerFoodRandomnessMain = function (input) {
 
 var fourDWinningRangeMain = function (input) {
   // Complete the More Comfortable: 4D with Winning Range exercise below with fourDWinningRangeMain as the main function.
-  var myOutputValue = "hello world";
+  var myOutputValue = "you lose";
+  var num1 = randomNumber();
+  var num2 = randomNumber();
+  var num3 = randomNumber();
+  var num4 = randomNumber();
+  var totoNumber = String(num1) + String(num2) + String(num3) + String(num4);
+  if (input < totoNumber || input > totoNumber) {
+    myOutputValue = "you win";
+  }
   return myOutputValue;
 };
 
