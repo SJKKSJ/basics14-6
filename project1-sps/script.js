@@ -12,9 +12,9 @@ var systemSPS = function (input) {
 var main = function (input) {
   var computerSPS = systemSPS();
   // input validation
-  var myOutputValue =
-    "Please enter a valid game input - scissors, paper, stone";
-  if (input == "scissors" || input == "paper" || input == "stone") {
+  if (input != "scissors" && input != "paper" && input != "stone") {
+    var myOutputValue =
+      "Please enter a valid game input - scissors, paper, stone";
   }
   // find out if win / lose / draw - condition stmts
   // Scissors - Stone: Stone Win ; Scissors - Paper: Scissors Win ; Stone - Paper : Paper Win
@@ -25,7 +25,15 @@ var main = function (input) {
     myOutputValue = "stone wins";
   } else if (input == "scissors" && computerSPS == "paper") {
     myOutputValue = "scissor wins";
-  } else myOutputValue = "paper wins";
+  } else if (input == "paper" && computerSPS == "paper") {
+    myOutputValue = "paper wins";
+  } else if (input == "paper" && computerSPS == "stone") {
+    myOutputValue = "stone wins";
+  } else if (input == "stone" && computerSPS == "paper") {
+    myOutputValue = "scissor wins";
+  } else if (input == "stone" && computerSPS == "paper") {
+    myOutputValue = "paper wins";
+  
   // return output results
   return myOutputValue;
 };
