@@ -1,39 +1,54 @@
-// system random generate scissors/paper/stone
-var systemSPS = function (input) {
-  // set an array that the system should generate only
-  var arraySPS = ["scissors", "paper", "stone"];
-  // Math.random() = 0 to 0.999999...; arraySPS.length = 3
-  // Math.floor(Math.random() * 3) = 0, 1 or 2;
-  var randomSPS = arraySPS[Math.floor(Math.random() * arraySPS.length)];
-  return randomSPS;
+// Part 1 Base Submission
+// computerOption helper function
+var computerSPS = function (input) {
+  var randomNumber = Math.floor(Math.random() * 3) + 1;
+  console.log(randomNumber);
+  if (randomNumber == 1) {
+    return "scissors";
+  } else if (randomNumber == 2) {
+    return "paper";
+  } else {
+    return "stone";
+  }
 };
 
-// input scissors, paper or stone
 var main = function (input) {
-  var computerSPS = systemSPS();
-  // input validation
-  if (input != "scissors" && input != "paper" && input != "stone") {
+  // user input validation
+  // if user input not equals to scissors/paper/stone, run invalid msg
+  if (!input == "scissors" || "paper" || "stone") {
     var myOutputValue =
       "Please enter a valid game input - scissors, paper, stone";
   }
-  // find out if win / lose / draw - condition stmts
-  // Scissors - Stone: Stone Win ; Scissors - Paper: Scissors Win ; Stone - Paper : Paper Win
-  // Scissors - Scissors or Stone - Stone or Paper - Paper: Draw
-  if (input == computerSPS) {
-    myOutputValue = "It's a draw";
-  } else if (input == "scissors" && computerSPS == "stone") {
-    myOutputValue = "stone wins";
-  } else if (input == "scissors" && computerSPS == "paper") {
-    myOutputValue = "scissor wins";
-  } else if (input == "paper" && computerSPS == "paper") {
-    myOutputValue = "paper wins";
-  } else if (input == "paper" && computerSPS == "stone") {
-    myOutputValue = "stone wins";
-  } else if (input == "stone" && computerSPS == "paper") {
-    myOutputValue = "scissor wins";
-  } else if (input == "stone" && computerSPS == "paper") {
-    myOutputValue = "paper wins";
-  
-  // return output results
+  var playerOption = input;
+  var computerOption = computerSPS();
+  // game win or lose conditions
+  // if player and computer same option, draw
+  if (playerOption == computerOption) {
+    myOutputValue = "It's a draw.";
+  }
+  // Player puts out scissors, if computer plays paper, user wins, else lose
+  else if (playerOption == "scissors") {
+    if (computerOption == "paper") {
+      myOutputValue = "You win";
+    } else {
+      myOutputValue = "You lose";
+    }
+  }
+  // Player puts out paper, if computer plays stone, user wins, else lose
+  else if (playerOption == "paper") {
+    if (computerOption == "stone") {
+      myOutputValue = "You win";
+    } else {
+      myOutputValue = "You lose";
+    }
+  }
+  // Player puts out stone, if computer plays scissors, user wins, else lose
+  else if (playerOption == "stone") {
+    if (computerOption == "scissors") {
+      myOutputValue = "You win";
+    } else {
+      myOutputValue = "You lose";
+    }
+  }
   return myOutputValue;
 };
