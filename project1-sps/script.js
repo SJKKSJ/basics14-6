@@ -64,11 +64,16 @@ var main = function (input) {
   // total number of games played, to calculate win loss percentage
   var totalGamesPlayed = userWinRecord + userLoseRecord + userDrawRecord;
 
-  return `${myOutputValue} Wins: ${userWinRecord}(${
-    (userWinRecord * 100) / totalGamesPlayed
-  }%) Losses: ${userLoseRecord}(${
-    (userLoseRecord * 100) / totalGamesPlayed
-  }%) Draws: ${userDrawRecord}(${
-    (userDrawRecord * 100) / totalGamesPlayed
-  }%) Total Games Played: ${userWinRecord + userLoseRecord + userDrawRecord}`;
+  return `${myOutputValue} Wins: ${userWinRecord}(${(
+    (userWinRecord * 100) /
+    totalGamesPlayed
+  ).toFixed(2)}%) Losses: ${userLoseRecord}(${(
+    (userLoseRecord * 100) /
+    totalGamesPlayed
+  ).toFixed(2)}%) Draws: ${userDrawRecord}(${(
+    (userDrawRecord * 100) /
+    totalGamesPlayed
+  ).toFixed(2)}%) Total Games Played: ${
+    userWinRecord + userLoseRecord + userDrawRecord
+  }`;
 };
