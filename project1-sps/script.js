@@ -27,7 +27,7 @@ var main = function (input) {
     userName = input;
     // change to start game mode
     currentMode = "Start Game";
-    myOutputValue = `Hi ${userName}! Please enter game input - scissors, paper, stone`;
+    return `Hi ${userName}! Please enter game input - scissors, paper, stone`;
   } else if (currentMode === "Start Game") {
     // user input validation
     // if user input not equals to scissors/paper/stone, run invalid msg
@@ -76,7 +76,7 @@ var main = function (input) {
     // total number of games played, to calculate win loss percentage
     var totalGamesPlayed = userWinRecord + userLoseRecord + userDrawRecord;
 
-    return `Hi ${userName}! ${myOutputValue} Wins: ${userWinRecord}(${(
+    return `Hi ${userName}! <br> ${myOutputValue} <br> Wins: ${userWinRecord}(${(
       (userWinRecord * 100) /
       totalGamesPlayed
     ).toFixed(2)}%) <br> Losses: ${userLoseRecord}(${(
