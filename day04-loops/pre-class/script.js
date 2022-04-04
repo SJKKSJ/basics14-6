@@ -6,10 +6,8 @@ var followAlongMain = function (input) {
 
 var simpleLoopMain = function (input) {
   // Attempt the Simple Loop with Variations exercise from the Loops module below with simpleLoopMain as the main function.
-  var counter = 0;
-  while (counter < 6) {
-    console.log("hello");
-  }
+  var myOutputValue = "hello world";
+  return myOutputValue;
 };
 
 var loopWithinLoopMain = function (input) {
