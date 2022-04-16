@@ -42,8 +42,7 @@ var makeDeck = function () {
   // Return the completed card deck
   return cardDeck;
 };
-
-// Card Shuffling
+// CARD SHUFFLING
 // Get a random index ranging from 0 (inclusive) to max (exclusive).
 var getRandomIndex = function (max) {
   return Math.floor(Math.random() * max);
@@ -73,22 +72,55 @@ var shuffleCards = function (cardDeck) {
 var moarCardsSingleCardMain = function (input) {
   // Complete the Base: Moar Cards Display Single Card exercise below with moarCardsSingleCardMain as the main function.
   var newDeck = makeDeck();
-  console.log(newDeck);
   var newShuffle = shuffleCards(newDeck);
-  console.log(newShuffle);
-  var myOutputValue = newShuffle.pop();
-  return `${myOutputValue.name} ${myOutputValue.suit}`;
+  var cardOne = newShuffle.pop();
+  var myOutputValue = `${cardOne.name} of ${cardOne.suit}`;
+  return myOutputValue;
 };
 
 var moarCardsLowCardMain = function (input) {
   // Complete the Base: Moar Cards Low Card exercise below with moarCardsLowCardMain as the main function.
-  var myOutputValue = "hello world";
+  // one card to player, one to computer
+  // compare the two cards
+  var newDeck = makeDeck();
+  var newShuffle = shuffleCards(newDeck);
+  var playerCard = newShuffle.pop();
+  var computerCard = newShuffle.pop();
+  if (playerCard.rank > computerCard.rank) {
+    var myOutputValue = `Player has won. Player has ${playerCard.name} of ${playerCard.suit}. Computer has ${computerCard.name} of ${computerCard.suit}.`;
+  } else if (playerCard.rank == computerCard.rank) {
+    myOutputValue = `It is a draw. Player has ${playerCard.name} of ${playerCard.suit}. Computer has ${computerCard.name} of ${computerCard.suit}.`;
+  } else {
+    myOutputValue = `Computer has won. Player has ${playerCard.name} of ${playerCard.suit}. Computer has ${computerCard.name} of ${computerCard.suit}.`;
+  }
   return myOutputValue;
 };
 
 var moarCardsLowCardQueenWinnerMain = function (input) {
   // Complete the Base: Moar Cards Low Card with Queen Winner exercise below with moarCardsLowCardQueenWinnerMain as the main function.
-  var myOutputValue = "hello world";
+  // TO TEST: { suit: "hearts", rank: 12, name: "queen" };
+
+  var newDeck = makeDeck();
+  var newShuffle = shuffleCards(newDeck);
+  var playerCard = newShuffle.pop();
+  var computerCard = newShuffle.pop();
+  if (
+    playerCard.rank > computerCard.rank ||
+    (playerCard.rank == 12 && computerCard.rank !== 12)
+  ) {
+    var myOutputValue = `Player has won. Player has ${playerCard.name} of ${playerCard.suit}. Computer has ${computerCard.name} of ${computerCard.suit}.`;
+  } else if (playerCard.rank == computerCard.rank) {
+    myOutputValue = `It is a draw. Player has ${playerCard.name} of ${playerCard.suit}. Computer has ${computerCard.name} of ${computerCard.suit}.`;
+  } else {
+    myOutputValue = `Computer has won. Player has ${playerCard.name} of ${playerCard.suit}. Computer has ${computerCard.name} of ${computerCard.suit}.`;
+  }
+  // } if (playerCard.rank == 12){
+  //   myOutputValue =  `Player has won`;
+  // } else if (computerCard.rank == 12 && playerCard.rank == 12){
+  //   myOutputValue =  `It is a draw`;
+  // } else {
+  //   myOutputValue =  `Computer has won`;
+  // }
   return myOutputValue;
 };
 
