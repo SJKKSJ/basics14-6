@@ -16,6 +16,9 @@ var playerTwoNumbers = [];
 // for the player combined numbers
 var playerOneScore;
 var playerTwoScore;
+// player accumulated score
+//var totalPlayerOneScore;
+//var totalPlayerTwoScore;
 
 // game results helper function - can it be here??
 var gameResults = function () {
