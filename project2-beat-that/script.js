@@ -22,14 +22,14 @@ var playerTwoScore;
 
 // game results helper function - can it be here??
 var gameResults = function () {
-  var winnerMessage = "";
+  var winnerMessage = `Player One's Number: ${playerOneScore} <br> Player Two's Number: ${playerTwoScore}`;
   var winnerScore = Math.min(playerOneScore, playerTwoScore);
   console.log(playerOneScore, playerTwoScore, winnerScore);
   if (playerOneScore == playerTwoScore) {
-    winnerMessage = "It's a draw!";
+    winnerMessage += "<br> It's a draw!";
   } else if (playerOneScore == winnerScore) {
-    winnerMessage = "Player 2 Wins!";
-  } else winnerMessage = "Player 1 Wins!";
+    winnerMessage += "<br> Player 2 Wins! 🏆";
+  } else winnerMessage += "<br> Player 1 Wins! 🏆";
   return winnerMessage;
 };
 
@@ -46,7 +46,7 @@ var main = function (input) {
     playerOneNumbers[0] = rollDice1;
     playerOneNumbers[1] = rollDice2;
     // output dice number rolled and instruction for next game step
-    myOutputValue = `Player One has rolled ${playerOneNumbers[0]} and ${playerOneNumbers[1]}. Please choose order 1 or 2.`;
+    myOutputValue = `Player One has rolled ${playerOneNumbers[0]} and ${playerOneNumbers[1]}. <br> Please choose order 1 or 2.`;
     // change to the next game mode
     gameMode = "playerOneOrder";
   }
@@ -55,7 +55,7 @@ var main = function (input) {
     console.log(gameMode);
     // input validation
     if (Number(input) !== 1 && Number(input) !== 2) {
-      myOutputValue = `You rolled ${playerOneNumbers[0]} and ${playerOneNumbers[1]}. Please enter a valid order choice - 1 or 2`;
+      myOutputValue = `Player One, you rolled ${playerOneNumbers[0]} and ${playerOneNumbers[1]}. <br> Please enter a valid order choice - 1 or 2`;
       return myOutputValue;
     }
     // input order choice of 1 or 2
@@ -63,7 +63,7 @@ var main = function (input) {
       playerOneScore = Number(
         String(playerOneNumbers[0]) + String(playerOneNumbers[1])
       );
-      myOutputValue = `You have chosen your number as ${playerOneScore}. Player Two can roll now.`;
+      myOutputValue = `Player One, you have chosen your number as ${playerOneScore}. <br> Player Two can roll now.`;
       // change the game mode to player 2's turn to roll
       gameMode = "playerTwoRoll";
     }
@@ -71,7 +71,7 @@ var main = function (input) {
       playerOneScore = Number(
         String(playerOneNumbers[1]) + String(playerOneNumbers[0])
       );
-      myOutputValue = `You have chosen your number as ${playerOneScore}. Player Two can roll now.`;
+      myOutputValue = `Player One, you have chosen your number as ${playerOneScore}. <br> Player Two can roll now.`;
       // change the game mode to player 2's turn to roll
       gameMode = "playerTwoRoll";
     }
@@ -85,7 +85,7 @@ var main = function (input) {
     playerTwoNumbers[0] = rollDice1;
     playerTwoNumbers[1] = rollDice2;
     // output dice number rolled and instruction for next game step
-    myOutputValue = `Player Two has rolled ${playerTwoNumbers[0]} and ${playerTwoNumbers[1]}. Please choose order 1 or 2.`;
+    myOutputValue = `Player Two has rolled ${playerTwoNumbers[0]} and ${playerTwoNumbers[1]}. <br> Please choose order 1 or 2.`;
     // change to the next game mode
     gameMode = "playerTwoOrder";
   }
@@ -95,14 +95,14 @@ var main = function (input) {
     console.log(gameMode);
     // input validation
     if (Number(input) !== 1 && Number(input) !== 2) {
-      myOutputValue = `You rolled ${playerTwoNumbers[0]} and ${playerTwoNumbers[1]}. Please enter a valid order choice - 1 or 2`;
+      myOutputValue = `Player Two, you rolled ${playerTwoNumbers[0]} and ${playerTwoNumbers[1]}. <br> Please enter a valid order choice - 1 or 2`;
     }
     // player 2 input order choice of 1 or 2
     if (Number(input) === 1) {
       playerTwoScore = Number(
         String(playerTwoNumbers[0]) + String(playerTwoNumbers[1])
       );
-      myOutputValue = `You have chosen your number as ${playerTwoScore}.`;
+      myOutputValue = `Player Two, you have chosen your number as ${playerTwoScore}.`;
       // change the game mode to results
       gameMode = "gameResults";
     }
@@ -110,7 +110,7 @@ var main = function (input) {
       playerTwoScore = Number(
         String(playerTwoNumbers[1]) + String(playerTwoNumbers[0])
       );
-      myOutputValue = `You have chosen your number as ${playerTwoScore}.`;
+      myOutputValue = `Player Two, you have chosen your number as ${playerTwoScore}.`;
       gameMode = "gameResults";
     }
   }
