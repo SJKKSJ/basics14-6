@@ -290,37 +290,52 @@ var main = function (input) {
         "You have drawn another card!" +
         displayHandsAll(playerHand, dealerHand) +
         "<br> Please input hit or stand to continue the game.";
-    } else {
+    }
+    // continue within the same mode if hit
+    else if (input == "stand") {
       // if stand, to evaluate the total hand value and determine winner
       var totalPlayerHandValue = calculateTotalHand(playerHand); // call the hand value calculation function and pass it through the player's card array
       console.log("Total Hand Value (Player):", totalPlayerHandValue);
       var totalDealerHandValue = calculateTotalHand(dealerHand); // call the hand value calculation function and pass it through the dealer's card array
       console.log("Total Hand Value (Dealer):", totalDealerHandValue);
 
-      // after player inputs hit or stand, dealer gets to decide also
+      // after player inputs stand, dealer gets to decide hit or stand also
       // if dealer hand value < 17, hit
-      while (totalDealerHandValue < 17) {}
+      while (totalDealerHandValue < 17) {
+        dealerHand.push(gameCardDeck.pop()); // index[2]
+        // to get the updated sum of dealer's hand value after new card is drawn
+        totalDealerHandValue = calculateTotalHand(dealerHand);
+        myOutputValue = displayHandsAll(playerHand, dealerHand); // so if its above 17, the while loop ends/exits
+      }
       // if dealer hand value >= 17, stand
-      // *****STOPPEDD HERE*****
 
       // compare the total hand value when there is no blackjack
       // same hand value > tie
       if (totalPlayerHandValue == totalDealerHandValue) {
         // comparison results message
         myOutputValue =
+          displayHandsAll(playerHand, dealerHand) +
+          "<br>" +
           displaySumHandsAll(totalPlayerHandValue, totalDealerHandValue) +
+          "<br>" +
           "<br> It is a tie!";
       }
       // player higher hand value >> player win
       else if (totalPlayerHandValue > totalDealerHandValue) {
         myOutputValue =
+          displayHandsAll(playerHand, dealerHand) +
+          "<br>" +
           displaySumHandsAll(totalPlayerHandValue, totalDealerHandValue) +
+          "<br>" +
           "<br> Player Wins!";
       }
       // dealer higher hand value >> dealer win
       else {
         myOutputValue =
+          displayHandsAll(playerHand, dealerHand) +
+          "<br>" +
           displaySumHandsAll(totalPlayerHandValue, totalDealerHandValue) +
+          "<br>" +
           "<br> Dealer Wins!";
       }
     } // closing bracket for "stand"
