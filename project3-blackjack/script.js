@@ -109,7 +109,7 @@ var checkIfBlackJack = function (cardHandArray) {
 // [A3] function to calculate hand value
 var calculateTotalHand = function (cardHandArray) {
   var totalHandValue = 0; // starting value, for reset
-
+  var aceCounter = 0; // not too sure about acecounter
   // adding up the card values in the player and dealer hand
   var index = 0;
   while (index < cardHandArray.length) {
@@ -122,13 +122,29 @@ var calculateTotalHand = function (cardHandArray) {
     ) {
       totalHandValue = totalHandValue + 10;
     }
+    // if the card is an ace, to determine if value = 1 or 11
+    else if (currentCard.name == "ace") {
+      // calculate total hand value
+      totalHandValue = totalHandValue + 11;
+      aceCounter += 1;
+    }
     // for cards 2 to 9, face value added
     else {
       totalHandValue = totalHandValue + currentCard.rank;
     }
     // move to the next card in the array
     index += 1;
-  } // once covered all, exits the while loop and return the total hand value
+  }
+  index = 0;
+  while (index < aceCounter) {
+    // if hand value is more than 21 incld an ace, the ace should be = 1
+    if (totalHandValue > 21) {
+      totalHandValue = totalHandValue - 10; // the difference btwn the 2 extreme value of ace
+    } // move to the next card in the array
+    index += 1;
+  }
+
+  // once covered all, exits the while loop and return the total hand value
   return totalHandValue;
 };
 
@@ -300,14 +316,13 @@ var main = function (input) {
       console.log("Total Hand Value (Dealer):", totalDealerHandValue);
 
       // after player inputs stand, dealer gets to decide hit or stand also
-      // if dealer hand value < 17, hit
+      // as long as dealer hand value < 17, dealer will keep drawing cards until >= 17
       while (totalDealerHandValue < 17) {
         dealerHand.push(gameCardDeck.pop()); // index[2]
         // to get the updated sum of dealer's hand value after new card is drawn
         totalDealerHandValue = calculateTotalHand(dealerHand);
         myOutputValue = displayHandsAll(playerHand, dealerHand); // so if its above 17, the while loop ends/exits
       }
-      // if dealer hand value >= 17, stand
 
       // compare the total hand value when there is no blackjack
       // same hand value > tie
