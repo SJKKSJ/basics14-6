@@ -235,6 +235,7 @@ var main = function (input) {
     gameMode = "modeEvaluate";
     // return myOutputValue
     myImage =
+      "<br>" +
       '<img src="https://c.tenor.com/NZB5RaiKFcAAAAAC/poker-face-poker.gif"/>';
     myOutputValue =
       "Everyone at the table has received their cards. Click on submit to evaluate the cards.<br><br>" +
@@ -268,50 +269,70 @@ var main = function (input) {
       // player and dealer both have blackjack = tie
       if (doesPlayerHaveBlackJack == true && doesDealerHaveBlackJack == true) {
         // call displayHandsAll and the blackjack found or not results
+        myImage =
+          "<br>" +
+          '<img src="https://c.tenor.com/S3nd8lvrCD0AAAAC/its-not-about-winning-its-about-fun.gif"/>';
         myOutputValue =
-          displayHandsAll(playerHand, dealerHand) + "<br> Blackjack Tie!";
+          displayHandsAll(playerHand, dealerHand) +
+          "<br> Blackjack Tie!" +
+          myImage;
       }
       // dealer have blackjack + player no blackjack + player did not bust = dealer wins
       if (doesDealerHaveBlackJack && !doesPlayerHaveBlackJack) {
+        myImage =
+          "<br>" +
+          '<img src="https://c.tenor.com/qU1X9zpaeIEAAAAC/sad-sadness.gif"/>';
         myOutputValue =
           displayHandsAll(playerHand, dealerHand) +
-          "<br> Blackjack! Dealer Wins!";
+          "<br> Blackjack! Dealer Wins!" +
+          myImage;
       }
 
       // player have blackjack + dealer no blackjack + dealer did not bust = player wins
       if (!doesDealerHaveBlackJack && doesPlayerHaveBlackJack) {
+        myImage =
+          "<br>" +
+          '<img src="https://c.tenor.com/y_qDvEaALjMAAAAC/spongebob-patrick-star.gif"/>';
         myOutputValue =
           displayHandsAll(playerHand, dealerHand) + " Blackjack! Player Wins!";
       }
     }
     // both no blackjack and both players did not bust
-    // to continue game by hit or stand
+    // to continue game and give suggestion to hit or stand
+    // compute hand value to give the specific suggestions
+    var totalPlayerHandValue = calculateTotalHand(playerHand); // call the hand value calculation function and pass it through the player's card array
+    console.log("Total Hand Value (Player):", totalPlayerHandValue);
+    var totalDealerHandValue = calculateTotalHand(dealerHand); // call the hand value calculation function and pass it through the dealer's card array
+    console.log("Total Hand Value (Dealer):", totalDealerHandValue);
+
     if (!doesDealerHaveBlackJack && !doesPlayerHaveBlackJack) {
-      gameMode = "modeHitOrStand";
       if (totalPlayerHandValue == totalDealerHandValue) {
         myImage =
+          "<br>" +
           '<img src="https://c.tenor.com/cofRHcGGOfoAAAAi/shy-cute.gif"/>';
         myOutputValue =
           displayHandsAll(playerHand, dealerHand) +
-          "<br> Its a tough one! <br>Decide if you would like to continue the game by entering 'hit' or 'stand'<br>" +
+          "<br> Its a tough one! <br>Decide if you would like to continue the game by entering 'hit' or 'stand'<br><br>" +
           myImage;
-      }
-      if (totalPlayerHandValue > totalDealerHandValue) {
+      } else if (totalPlayerHandValue > totalDealerHandValue) {
         myImage =
+          "<br>" +
           '<img src="https://c.tenor.com/mqvLadAFFtMAAAAi/thinking-about-question-mark.gif"/>';
         myOutputValue =
           displayHandsAll(playerHand, dealerHand) +
-          "<br>Do you think you have the upper hand? <br>Decide if you would like to continue the game by entering 'hit' or 'stand'<br>" +
+          "<br>Do you think you have the upper hand? <br>Decide if you would like to continue the game by entering 'hit' or 'stand'<br><br>" +
           myImage;
       } else {
         myImage =
+          "<br>" +
           '<img src="https://c.tenor.com/VnKy3vQPfywAAAAi/raccoon-sneaky.gif"/>';
         myOutputValue =
           displayHandsAll(playerHand, dealerHand) +
-          "<br>Would you take a chance? <br>Decide if you would like to continue the game by entering 'hit' or 'stand'<br>" +
+          "<br>Would you take a chance? <br>Decide if you would like to continue the game by entering 'hit' or 'stand'<br><br>" +
           myImage;
       }
     }
+    gameMode = "modeHitOrStand";
     return myOutputValue;
   } // closing bracket for whole evaluate mode
 
@@ -320,27 +341,35 @@ var main = function (input) {
     console.log(gameMode);
     // input validation: "Please input "hit" or "stand" as your next move to continue the game."
     if (input != "hit" && input != "stand") {
+      myImage =
+        "<br>" +
+        '<img src="https://c.tenor.com/zqFrgHgqc7IAAAAi/bunny-cute.gif"/>';
       myOutputValue =
         "Invalid Input! <br> Please input hit or stand as your next move to continue the game.<br>" +
-        displayHandsAll(playerHand, dealerHand);
+        displayHandsAll(playerHand, dealerHand) +
+        myImage;
     }
     // if player enters hit, issue another card // but how to make it continue? if they choose hit again?
     else if (input == "hit") {
       playerHand.push(gameCardDeck.pop()); // index[2] etc.
       console.log(playerHand);
+      myImage =
+        "<br>" +
+        '<img src="https://c.tenor.com/yzhs7z87nOAAAAAC/mickey-mouse-card.gif"/>';
       myOutputValue =
         "You have drawn another card!<br>" +
         displayHandsAll(playerHand, dealerHand) +
-        "<br> Please input hit or stand to continue the game.";
+        "<br> Please input hit or stand to continue the game.<br><br>" +
+        myImage;
       // gameMode = "modeHitOrStand";
     }
     // continue within the same mode if hit
     // else if stand
     else if (input == "stand") {
       // if stand, to evaluate the total hand value and determine winner
-      var totalPlayerHandValue = calculateTotalHand(playerHand); // call the hand value calculation function and pass it through the player's card array
+      totalPlayerHandValue = calculateTotalHand(playerHand); // call the hand value calculation function and pass it through the player's card array
       console.log("Total Hand Value (Player):", totalPlayerHandValue);
-      var totalDealerHandValue = calculateTotalHand(dealerHand); // call the hand value calculation function and pass it through the dealer's card array
+      totalDealerHandValue = calculateTotalHand(dealerHand); // call the hand value calculation function and pass it through the dealer's card array
       console.log("Total Hand Value (Dealer):", totalDealerHandValue);
 
       // check for blackjack
@@ -365,19 +394,24 @@ var main = function (input) {
         // same hand value > tie
         if (totalPlayerHandValue == totalDealerHandValue) {
           // comparison results message
+          myImage =
+            "<br>" +
+            '<img src="https://c.tenor.com/S3nd8lvrCD0AAAAC/its-not-about-winning-its-about-fun.gif"/>';
           myOutputValue =
             displayHandsAll(playerHand, dealerHand) +
             "<br>" +
             displaySumHandsAll(totalPlayerHandValue, totalDealerHandValue) +
             "<br>" +
-            "<br> It is a tie!";
+            "<br> It is a tie!" +
+            myImage;
           if (
             doesPlayerHaveBlackJack == true &&
             doesDealerHaveBlackJack == true
           ) {
             myOutputValue =
               myOutputValue +
-              "<br> Both Player and Dealer have Blackjack!<br> Refresh the page to play again!";
+              "<br> Both Player and Dealer have Blackjack!<br> Refresh the page to play again!<br><br>" +
+              myImage;
           }
           gameMode = "end";
           return myOutputValue;
@@ -385,16 +419,21 @@ var main = function (input) {
         // player hand value higher
         if (totalPlayerHandValue > totalDealerHandValue) {
           // comparison results message
+          myImage =
+            "<br>" +
+            '<img src="https://c.tenor.com/y_qDvEaALjMAAAAC/spongebob-patrick-star.gif"/>';
           myOutputValue =
             displayHandsAll(playerHand, dealerHand) +
             "<br>" +
             displaySumHandsAll(totalPlayerHandValue, totalDealerHandValue) +
             "<br>" +
-            "<br> Player Wins!";
+            "<br> Player Wins!" +
+            myImage;
           if (doesPlayerHaveBlackJack == true) {
             myOutputValue =
               myOutputValue +
-              "<br> Player has Blackjack!<br> Refresh the page to play again!";
+              "<br> Player has Blackjack!<br> Refresh the page to play again!<br><br>" +
+              myImage;
           }
           gameMode = "end";
           return myOutputValue;
@@ -402,16 +441,21 @@ var main = function (input) {
         // dealer hand value higher
         if (totalPlayerHandValue < totalDealerHandValue) {
           // comparison results message
+          myImage =
+            "<br>" +
+            '<img src="https://c.tenor.com/qU1X9zpaeIEAAAAC/sad-sadness.gif"/>';
           myOutputValue =
             displayHandsAll(playerHand, dealerHand) +
             "<br>" +
             displaySumHandsAll(totalPlayerHandValue, totalDealerHandValue) +
             "<br>" +
-            "<br> Dealer Wins!";
+            "<br> Dealer Wins!" +
+            myImage;
           if (doesPlayerHaveBlackJack == true) {
             myOutputValue =
               myOutputValue +
-              "<br> Dealer has Blackjack!<br> Refresh the page to play again!";
+              "<br> Dealer has Blackjack!<br> Refresh the page to play again!<br><br>" +
+              myImage;
           }
           gameMode = "end";
           return myOutputValue;
@@ -420,16 +464,21 @@ var main = function (input) {
 
       // if dealer bust & player did not
       if (totalPlayerHandValue < 21 && totalDealerHandValue > 21) {
+        myImage =
+          "<br>" +
+          '<img src="https://c.tenor.com/y_qDvEaALjMAAAAC/spongebob-patrick-star.gif"/>';
         myOutputValue =
           displayHandsAll(playerHand, dealerHand) +
           "<br>" +
           displaySumHandsAll(totalPlayerHandValue, totalDealerHandValue) +
           "<br>" +
-          "<br> Dealer Busted! Player Wins!";
+          "<br> Dealer Busted! Player Wins!" +
+          myImage;
         if (doesPlayerHaveBlackJack == true) {
           myOutputValue =
             myOutputValue +
-            "<br> Player has Blackjack!<br> Refresh the page to play again!";
+            "<br> Player has Blackjack!<br> Refresh the page to play again!<br><br>" +
+            myImage;
         }
         gameMode = "end";
         return myOutputValue;
@@ -437,16 +486,21 @@ var main = function (input) {
 
       // if dealer did not bust & player bust
       if (totalPlayerHandValue > 21 && totalDealerHandValue < 21) {
+        myImage =
+          "<br>" +
+          '<img src="https://c.tenor.com/qU1X9zpaeIEAAAAC/sad-sadness.gif"/>';
         myOutputValue =
           displayHandsAll(playerHand, dealerHand) +
           "<br>" +
           displaySumHandsAll(totalPlayerHandValue, totalDealerHandValue) +
           "<br>" +
-          "<br> Player Busted! Dealer Wins!";
+          "<br> Player Busted! Dealer Wins!" +
+          myImage;
         if (doesDealerHaveBlackJack == true) {
           myOutputValue =
             myOutputValue +
-            "<br> Dealer has Blackjack!<br> Refresh the page to play again!";
+            "<br> Dealer has Blackjack!<br> Refresh the page to play again!<br><br>" +
+            myImage;
         }
         gameMode = "end";
         return myOutputValue;
@@ -454,19 +508,26 @@ var main = function (input) {
 
       // both dealer and player busted
       if (totalPlayerHandValue > 21 && totalDealerHandValue > 21) {
+        myImage =
+          "<br>" +
+          '<img src="https://c.tenor.com/JKPJy9fQiAAAAAAi/cat-diragana.gif"/>';
         myOutputValue =
           displayHandsAll(playerHand, dealerHand) +
           "<br>" +
           displaySumHandsAll(totalPlayerHandValue, totalDealerHandValue) +
           "<br>" +
-          "<br> Oops! Both Player and Dealer Busted! <br> Refresh the page to play again!";
+          "<br> Oops! Both Player and Dealer Busted! <br> Refresh the page to play again!<br><br> " +
+          myImage;
       }
       gameMode = "end";
       return myOutputValue;
     } // closing bracket for "stand"
   } // closing bracket for whole hit-stand mode
   else {
-    myOutputValue = "This game round is over. Please refresh to play again!";
+    myImage = '<img src="https://c.tenor.com/inhg61kTkrwAAAAi/cute.gif"/>';
+    myOutputValue =
+      "This game round is over. Please refresh to play again!<br><br>" +
+      myImage;
   }
   return myOutputValue;
 };
