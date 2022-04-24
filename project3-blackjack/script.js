@@ -159,7 +159,7 @@ var checkIfBlackJack = function (cardHandArray) {
 // to help in displaying the cards on hand
 var displayHandsAll = function (playerHandArray, dealerHandArray) {
   // showing Player's Hand
-  var playerHandMsg = "<br> Player Hand: ";
+  var playerHandMsg = "Player Hand: ";
   var index = 0;
   while (index < playerHandArray.length) {
     playerHandMsg =
@@ -204,6 +204,8 @@ var displaySumHandsAll = function (playerHandSum, dealerHandSum) {
 // main function of the game
 var main = function (input) {
   var myOutputValue = ""; // default outputvalue
+  // myImage = '<img src=""/>'
+  var myImage;
   // initial click to start the game
   // getting the initial 2 cards for dealer and player when game starts
   if (gameMode === "start") {
@@ -231,9 +233,12 @@ var main = function (input) {
 
     // change to the next game mode to evaluate the cards for blackjack
     gameMode = "modeEvaluate";
-    // return myOutputValue - doesnt appear??
+    // return myOutputValue
+    myImage =
+      '<img src="https://c.tenor.com/NZB5RaiKFcAAAAAC/poker-face-poker.gif"/>';
     myOutputValue =
-      "Everyone at the table has received their cards. Click on submit to evaluate the cards.";
+      "Everyone at the table has received their cards. Click on submit to evaluate the cards.<br><br>" +
+      myImage;
     return myOutputValue;
   }
 
@@ -284,17 +289,27 @@ var main = function (input) {
     if (!doesDealerHaveBlackJack && !doesPlayerHaveBlackJack) {
       gameMode = "modeHitOrStand";
       if (totalPlayerHandValue == totalDealerHandValue) {
+        myImage =
+          '<img src="https://c.tenor.com/cofRHcGGOfoAAAAi/shy-cute.gif"/>';
         myOutputValue =
           displayHandsAll(playerHand, dealerHand) +
-          "<br> Its a tough one! <br>Decide if you would like to continue the game by entering 'hit' or 'stand'<br>";
-      } else if (totalPlayerHandValue > totalDealerHandValue) {
+          "<br> Its a tough one! <br>Decide if you would like to continue the game by entering 'hit' or 'stand'<br>" +
+          myImage;
+      }
+      if (totalPlayerHandValue > totalDealerHandValue) {
+        myImage =
+          '<img src="https://c.tenor.com/mqvLadAFFtMAAAAi/thinking-about-question-mark.gif"/>';
         myOutputValue =
           displayHandsAll(playerHand, dealerHand) +
-          "<br>Do you think you have the upper hand? <br>Decide if you would like to continue the game by entering 'hit' or 'stand'<br>";
+          "<br>Do you think you have the upper hand? <br>Decide if you would like to continue the game by entering 'hit' or 'stand'<br>" +
+          myImage;
       } else {
+        myImage =
+          '<img src="https://c.tenor.com/VnKy3vQPfywAAAAi/raccoon-sneaky.gif"/>';
         myOutputValue =
           displayHandsAll(playerHand, dealerHand) +
-          "<br>Would you take a chance? <br>Decide if you would like to continue the game by entering 'hit' or 'stand'<br>";
+          "<br>Would you take a chance? <br>Decide if you would like to continue the game by entering 'hit' or 'stand'<br>" +
+          myImage;
       }
     }
     return myOutputValue;
@@ -310,14 +325,14 @@ var main = function (input) {
         displayHandsAll(playerHand, dealerHand);
     }
     // if player enters hit, issue another card // but how to make it continue? if they choose hit again?
-    if (input == "hit") {
+    else if (input == "hit") {
       playerHand.push(gameCardDeck.pop()); // index[2] etc.
       console.log(playerHand);
       myOutputValue =
-        "You have drawn another card!" +
+        "You have drawn another card!<br>" +
         displayHandsAll(playerHand, dealerHand) +
         "<br> Please input hit or stand to continue the game.";
-      gameMode = "modeHitOrStand";
+      // gameMode = "modeHitOrStand";
     }
     // continue within the same mode if hit
     // else if stand
@@ -342,11 +357,11 @@ var main = function (input) {
         dealerHand.push(gameCardDeck.pop()); // index[2]
         // to get the updated sum of dealer's hand value after new card is drawn
         totalDealerHandValue = calculateTotalHand(dealerHand);
-        myOutputValue = displayHandsAll(playerHand, dealerHand); // so if its above 17, the while loop ends/exits
+        // myOutputValue = displayHandsAll(playerHand, dealerHand); // so if its above 17, the while loop ends/exits
       }
 
-      // if both did not bust aka < 21
-      if (totalPlayerHandValue < 21 && totalDealerHandValue < 21) {
+      // if both did not bust aka <= 21
+      if (totalPlayerHandValue <= 21 && totalDealerHandValue <= 21) {
         // same hand value > tie
         if (totalPlayerHandValue == totalDealerHandValue) {
           // comparison results message
@@ -364,6 +379,8 @@ var main = function (input) {
               myOutputValue +
               "<br> Both Player and Dealer have Blackjack!<br> Refresh the page to play again!";
           }
+          gameMode = "end";
+          return myOutputValue;
         }
         // player hand value higher
         if (totalPlayerHandValue > totalDealerHandValue) {
@@ -379,6 +396,8 @@ var main = function (input) {
               myOutputValue +
               "<br> Player has Blackjack!<br> Refresh the page to play again!";
           }
+          gameMode = "end";
+          return myOutputValue;
         }
         // dealer hand value higher
         if (totalPlayerHandValue < totalDealerHandValue) {
@@ -394,6 +413,8 @@ var main = function (input) {
               myOutputValue +
               "<br> Dealer has Blackjack!<br> Refresh the page to play again!";
           }
+          gameMode = "end";
+          return myOutputValue;
         }
       } // closing bracket for if didnt bust and compare hand value for winner
 
@@ -410,7 +431,10 @@ var main = function (input) {
             myOutputValue +
             "<br> Player has Blackjack!<br> Refresh the page to play again!";
         }
+        gameMode = "end";
+        return myOutputValue;
       }
+
       // if dealer did not bust & player bust
       if (totalPlayerHandValue > 21 && totalDealerHandValue < 21) {
         myOutputValue =
@@ -424,7 +448,10 @@ var main = function (input) {
             myOutputValue +
             "<br> Dealer has Blackjack!<br> Refresh the page to play again!";
         }
+        gameMode = "end";
+        return myOutputValue;
       }
+
       // both dealer and player busted
       if (totalPlayerHandValue > 21 && totalDealerHandValue > 21) {
         myOutputValue =
@@ -435,6 +462,7 @@ var main = function (input) {
           "<br> Oops! Both Player and Dealer Busted! <br> Refresh the page to play again!";
       }
       gameMode = "end";
+      return myOutputValue;
     } // closing bracket for "stand"
   } // closing bracket for whole hit-stand mode
   else {
