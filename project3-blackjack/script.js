@@ -47,7 +47,6 @@ var makeDeck = function () {
       cardDeck.push(card);
     }
   }
-
   // Return the completed card deck
   return cardDeck;
 };
