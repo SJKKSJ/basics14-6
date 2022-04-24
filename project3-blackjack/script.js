@@ -11,7 +11,7 @@ var makeDeck = function () {
   // Initialise an empty deck array
   var cardDeck = [];
   // Initialise an array of the 4 suits in our deck. We will loop over this array.
-  var suits = ["hearts", "diamonds", "clubs", "spades"];
+  var suits = ["♥", "♦", "♣", "♠"]; // ["hearts", "diamonds", "clubs", "spades"];
 
   // Loop over the suits array
   for (var i = 0; i < suits.length; i += 1) {
@@ -320,7 +320,6 @@ var main = function (input) {
       gameMode = "modeHitOrStand";
     }
     // continue within the same mode if hit
-    // what about hit then stand?
     // else if stand
     else if (input == "stand") {
       // if stand, to evaluate the total hand value and determine winner
@@ -435,7 +434,11 @@ var main = function (input) {
           "<br>" +
           "<br> Oops! Both Player and Dealer Busted! <br> Refresh the page to play again!";
       }
+      gameMode = "end";
     } // closing bracket for "stand"
   } // closing bracket for whole hit-stand mode
+  else {
+    myOutputValue = "This game round is over. Please refresh to play again!";
+  }
   return myOutputValue;
 };
