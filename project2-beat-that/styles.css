@@ -57,7 +57,8 @@ nav ul li a {
 }
 
 .container {
-  background-color: #ffffff;
+  background-image: url("https://www.pngitem.com/pimgs/m/64-646702_dice-png-transparent-big-image-image-dice-transparent.png");
+  /* background-color: #77cdff; */
   margin: 40px auto;
   max-width: 800px;
   padding: 38px 31px;

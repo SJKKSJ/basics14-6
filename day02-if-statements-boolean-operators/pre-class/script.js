@@ -187,8 +187,12 @@ var twiceGuessMain = function (input) {
   var randomDiceNumber = rollDice();
   // default output value
   var myOutputValue = "you lose";
+  // condition stmt that user should only guess between 1 to 3; input validation
+  if (input != 1 && input != 2 && input != 3) {
+    myOutputValue = "you have entered an invalid number";
+  }
   // if input * 2 = randomDiceNumber, update output.
-  if (input * 2 == randomDiceNumber) {
+  if (input == randomDiceNumber / 2) {
     myOutputValue = "you win";
   }
   // return output
